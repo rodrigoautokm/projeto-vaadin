@@ -1,0 +1,1 @@
+1,'admin','$2a$10$ScoPeDaExm7RwvSrJyKAHusfK0H8m5mvtTdKkyIsYP.IMEo0XMzCe',,

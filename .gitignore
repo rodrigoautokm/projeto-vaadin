@@ -1,0 +1,10 @@
+# Ignorar arquivos de configuração com senhas
+src/main/resources/application.properties
+src/main/resources/application.yml
+
+# Ignorar arquivos Java sensíveis
+src/main/java/com/exemplo/SysbaseConnection.java
+src/main/java/com/exemplo/TestConnection.java
+
+# Ignorar arquivos compilados
+*.class
