@@ -1,0 +1,323 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Garantir que o layout ocupe a tela inteira */
+html, body, #app {
+    height: 100%;
+    width: 100%;
+}
+
+/* Estilização da barra superior do AppLayout */
+vaadin-app-layout::part(navbar) {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100% !important; /* Garante que a navbar ocupe toda a largura da página */
+    position: fixed !important; /* Fixa a navbar no topo */
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 1001 !important; /* Garante que a navbar fique acima do drawer */
+}
+
+/* Estilização do botão de toggle (menu lateral) */
+vaadin-app-layout vaadin-button[slot="navbar touch-optimized"] {
+    color: white !important;
+}
+
+/* Estilização do botão de menu na barra de navegação */
+vaadin-app-layout vaadin-button[title="Abrir Menu"] {
+    color: white !important;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+vaadin-app-layout vaadin-button[title="Abrir Menu"]:hover {
+    color: #e0e0e0 !important;
+}
+
+/* Estilização do menu lateral (drawer) */
+vaadin-app-layout::part(drawer) {
+    background-color: #f8f9fa !important;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1) !important;
+    border-right: 1px solid #e0e0e0 !important;
+    display: block !important; /* Garante que o drawer seja visível */
+    width: 300px !important; /* Ajustar a largura do drawer */
+    height: calc(100% - 64px) !important; /* Ajusta a altura do drawer para começar abaixo da navbar (64px é a altura padrão da navbar) */
+    position: fixed !important; /* Garante que o drawer fique fixo */
+    z-index: 1000 !important; /* Garante que o drawer fique abaixo da navbar */
+    top: 64px !important; /* Começa abaixo da navbar */
+    left: 0 !important;
+    overflow-x: hidden !important; /* Remove a barra de rolagem horizontal */
+}
+
+/* Estilização das abas no menu lateral */
+vaadin-tabs {
+    width: 100%;
+}
+
+/* Estilização dos itens das abas */
+vaadin-tab {
+    padding: 10px 20px;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    overflow: hidden; /* Esconde o texto que excede a largura */
+    text-overflow: ellipsis; /* Adiciona "..." ao texto que excede a largura */
+}
+
+/* Estilização do conteúdo interno do vaadin-tab para evitar overflow */
+vaadin-tab > * {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+vaadin-tab:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+
+vaadin-tab[selected] {
+    background-color: #e9ecef;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Estilização do conteúdo principal (área à direita do drawer) */
+vaadin-app-layout vaadin-vertical-layout[slot="content"] {
+    margin-left: 300px !important; /* Margem à esquerda para corresponder à largura do drawer */
+    width: calc(100% - 300px) !important; /* Ajustar a largura para ocupar o espaço restante */
+    margin-top: 64px !important; /* Ajusta o conteúdo principal para começar abaixo da navbar */
+}
+
+@media (max-width: 768px) {
+    vaadin-app-layout::part(drawer) {
+        width: 250px !important; /* Reduzir a largura do drawer em telas menores */
+    }
+    vaadin-app-layout vaadin-vertical-layout[slot="content"] {
+        margin-left: 250px !important; /* Ajustar a margem para corresponder à nova largura do drawer */
+        width: calc(100% - 250px) !important; /* Ajustar a largura para ocupar o espaço restante */
+    }
+}
+
+/* Estilização do Grid de Dados (principal) */
+.grid-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.grid-container vaadin-grid {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.grid-container vaadin-grid::part(header-cell) {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.grid-container vaadin-grid::part(header-cell-content) {
+    flex-grow: 1;
+}
+
+/* Garantir que o HeaderRow (linha de cabeçalho com filtros) seja independente das colunas de dados */
+.grid-container vaadin-grid::part(header-cell) {
+    min-width: fit-content !important; /* Permite que a célula do HeaderRow se ajuste ao conteúdo */
+    white-space: nowrap !important; /* Impede que o texto quebre em várias linhas */
+    overflow: visible !important; /* Garante que os filtros sejam visíveis mesmo se a coluna for redimensionada */
+}
+
+/* Estilização para a célula do HeaderRow que contém os filtros ativos */
+.grid-filter-header-cell {
+    min-width: 450px !important; /* Garante espaço suficiente para os filtros */
+    overflow: visible !important;
+    white-space: nowrap !important;
+}
+
+.grid-container vaadin-grid::part(sort-indicator) {
+    display: inline-block !important;
+    visibility: visible !important;
+    color: #666;
+    margin-left: 5px;
+}
+
+.grid-container vaadin-grid::part(sort-indicator):hover {
+    color: #007bff;
+}
+
+.grid-container vaadin-icon.filter-icon,
+.grid-container vaadin-icon.hide-column-icon {
+    font-size: 16px;
+    cursor: pointer;
+    color: #666;
+    margin-left: 5px;
+    transition: color 0.3s ease;
+}
+
+.grid-container vaadin-icon.filter-icon:hover,
+.grid-container vaadin-icon.hide-column-icon:hover {
+    color: #007bff;
+}
+
+.grid-container vaadin-icon.filter-icon[style*="var(--lumo-primary-color)"] {
+    color: var(--lumo-primary-color) !important;
+}
+
+.grid-container vaadin-grid-cell-content {
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Estilização dos cabeçalhos do grid */
+.grid-container vaadin-grid::part(header) {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+/* Estilizar as linhas do grid */
+.grid-container vaadin-grid::part(row):hover {
+    background-color: #f1f5f9;
+}
+
+.grid-container vaadin-grid::part(row-selected) {
+    background-color: #e3f2fd;
+}
+
+/* Estilização do Grid Agrupado */
+.grouped-grid {
+    border: 2px solid #000 !important;
+    margin-top: 10px !important;
+    resize: both !important;
+    overflow: auto !important;
+    min-height: 200px !important;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização do Modal de Edição */
+.edit-client-modal {
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.edit-client-modal .vaadin-text-field {
+    margin: 5px 0;
+    width: 100%;
+}
+
+.edit-client-modal .vaadin-button {
+    margin: 5px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-client-modal .vaadin-button[theme~="primary"] {
+    background-color: #007bff;
+    color: white;
+}
+
+.edit-client-modal .vaadin-button[theme~="primary"]:hover {
+    background-color: #0056b3;
+}
+
+.edit-client-modal .vaadin-button:not([theme~="primary"]) {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #e0e0e0;
+}
+
+.edit-client-modal .vaadin-button:not([theme~="primary"]):hover {
+    background-color: #e9ecef;
+}
+
+/* Estilização de Botões Gerais (ex.: "Novo Cliente") */
+.novo-cliente-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin: 10px 0;
+}
+
+.novo-cliente-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estilização Geral do Conteúdo */
+.main-content {
+    margin: 0;
+    padding: 20px;
+    position: relative;
+}
+
+.main-content h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilização do botão "Restaurar Padrão" */
+.reset-default-button {
+    background-color: #ff9800;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-default-button:hover {
+    background-color: #e68900;
+}
+
+/* Estilização do MainMenuModal */
+.main-menu-modal {
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main-menu-modal .vaadin-button {
+    margin: 5px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.main-menu-modal .vaadin-button[theme~="primary"] {
+    background-color: #007bff;
+    color: white;
+}
+
+.main-menu-modal .vaadin-button[theme~="primary"]:hover {
+    background-color: #0056b3;
+}

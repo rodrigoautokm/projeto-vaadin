@@ -1,0 +1,14 @@
+{
+  "frontendFolder": "D:/projeto-vaadin/frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "D:/projeto-vaadin/target/flow-frontend",
+  "staticOutput": "D:/projeto-vaadin/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "frontendBundleOutput": "D:\\projeto-vaadin\\target\\classes\\META-INF\\VAADIN\\webapp",
+  "addonFrontendFolder": "target/flow-frontend/",
+  "themeName": "",
+  "clientServiceWorkerSource": "D:\\projeto-vaadin\\target\\sw.ts",
+  "pwaEnabled": true,
+  "offlineEnabled": true,
+  "offlinePath": "'.'"
+}
