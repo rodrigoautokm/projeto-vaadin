@@ -148,6 +148,7 @@ public void initialize(String gridId, Grid<T> grid, List<ColumnConfig<T>> column
                 .findFirst()
                 .map(cfg -> cfg.getGridColumnConfig().getField())
                 .orElse(columnKey);
+            logger.debug("[GridFilterUtil] Sort event - gridId: {}, UI columnKey: {}, mapped fieldName: {}", gridId, columnKey, fieldName);
             sortColumn = fieldName; // Usar fieldName diretamente
             sortDirection = sortOrder.getDirection() == SortDirection.ASCENDING ? "ASC" : "DESC";
             logger.debug("Ordenação alterada para gridId: {}. Coluna: {}, Direção: {}", gridId, sortColumn, sortDirection);
@@ -513,20 +514,25 @@ private Map<String, String> carregarFiltros() {
 
 @Transactional
 private void salvarSortConfig() {
-    logger.debug("Salvando sort_config para gridId={} e usuarioId={}", gridId, usuarioId);
+    // logger.debug("Salvando sort_config para gridId={} e usuarioId={}", gridId, usuarioId); // Log original, será substituído/complementado
     try {
         String usuario = getUsuarioId();
+        logger.debug("[GridFilterUtil] Iniciando salvamento de sort_config para gridId: {}. Usuário: {}, ClassName: {}", this.gridId, usuario, this.className);
         List<ColumnConfigUsuario> allConfigs = columnConfigUsuarioRepository.findByUsuarioAndClassName(usuario, className);
         boolean needsSave = false;
 
         // Verificar se houve uma mudança explícita na ordenação
         if (sortChanged) {
             if (sortColumn != null && sortDirection != null) {
+                logger.debug("[GridFilterUtil] Processando alteração de ordenação para gridId: {}. Target fieldName: {}, Nova direção: {}.", this.gridId, this.sortColumn, this.sortDirection);
                 ColumnConfigUsuario targetConfig = null;
+                String oldSortDirectionForTarget = null; // Para log
                 for (ColumnConfigUsuario config : allConfigs) {
                     if (config.getFieldName().equals(sortColumn)) {
                         targetConfig = config;
+                        oldSortDirectionForTarget = config.getSort(); // Guarda a direção anterior
                     } else if (config.getSort() != null && !config.getSort().isEmpty()) {
+                        logger.debug("[GridFilterUtil] Limpando ordenação anterior para fieldName: {} no gridId: {}", config.getFieldName(), this.gridId);
                         config.setSort(null);
                         needsSave = true;
                     }
@@ -536,17 +542,21 @@ private void salvarSortConfig() {
                     targetConfig.setClassName(className);
                     targetConfig.setFieldName(sortColumn);
                     targetConfig.setUsuario(usuario);
-                    targetConfig.setVisible("1");
-                    targetConfig.setOrdenacaoGrid(0);
+                    targetConfig.setVisible("1"); // Default visibility
+                    targetConfig.setOrdenacaoGrid(0); // Default order
                     targetConfig.setSort(sortDirection);
-                    columnConfigUsuarioRepository.save(targetConfig);
+                    logger.info("[GridFilterUtil] Criando nova configuração de ordenação para gridId: {}, fieldName: {}, direção: {}", this.gridId, targetConfig.getFieldName(), targetConfig.getSort());
+                    // Nota: save é chamado abaixo em saveAll, ou individualmente se for a única mudança
+                    // columnConfigUsuarioRepository.save(targetConfig); // Removido save individual aqui para usar saveAll
+                    allConfigs.add(targetConfig); // Adiciona à lista para saveAll
                     needsSave = true;
                 } else if (!sortDirection.equals(targetConfig.getSort())) {
+                    logger.info("[GridFilterUtil] Atualizando configuração de ordenação existente para gridId: {}, fieldName: {}, direção anterior: {}, nova direção: {}", this.gridId, targetConfig.getFieldName(), oldSortDirectionForTarget, sortDirection);
                     targetConfig.setSort(sortDirection);
                     needsSave = true;
                 }
             } else {
-                // Apenas limpar se a ordenação foi explicitamente removida
+                 logger.debug("[GridFilterUtil] Limpando todas as configurações de ordenação para gridId: {}. Usuário: {}, ClassName: {}", this.gridId, usuario, this.className);
                 for (ColumnConfigUsuario config : allConfigs) {
                     if (config.getSort() != null && !config.getSort().isEmpty()) {
                         config.setSort(null);
@@ -555,69 +565,91 @@ private void salvarSortConfig() {
                 }
             }
         } else {
-            logger.debug("Nenhuma mudança na ordenação detectada, pulando salvamento para gridId={}", gridId);
+            logger.debug("Nenhuma mudança na ordenação detectada, pulando salvamento para gridId={}", this.gridId);
         }
 
         if (needsSave) {
             columnConfigUsuarioRepository.saveAll(allConfigs);
             columnConfigUsuarioRepository.flush();
-            logger.info("Sort_config salvo com sucesso para gridId={}", gridId);
+            logger.info("Sort_config salvo com sucesso para gridId={}", this.gridId);
         } else {
-            logger.debug("Nenhuma alteração necessária para sort_config do gridId={}", gridId);
+            logger.debug("Nenhuma alteração necessária para sort_config do gridId={}", this.gridId);
         }
 
         // Resetar a flag após salvar
         sortChanged = false;
+    } catch (IllegalStateException e) {
+        logger.error("[GridFilterUtil] Falha ao obter usuário para salvar sort_config para gridId: {}. Erro: {}", this.gridId, e.getMessage(), e);
+        // Não relançar para não quebrar a UI, mas o erro está logado.
     } catch (Exception e) {
-        logger.error("Erro ao salvar sort_config: {}", e.getMessage(), e);
-        throw new RuntimeException("Falha ao salvar configuração de ordenação", e);
+        logger.error("[GridFilterUtil] Erro ao salvar sort_config para gridId: {}. Erro: {}", this.gridId, e.getMessage(), e);
+        throw new RuntimeException("Falha ao salvar configuração de ordenação para gridId: " + this.gridId, e);
     }
 }
 
 
 
 public void carregarSortConfig() {
-    logger.debug("Carregando sort_config para gridId={} e usuarioId={}", gridId, usuarioId);
+    String usuario = null; // Inicializa para uso no log de erro, caso getUsuarioId falhe
     try {
-        String usuario = getUsuarioId();
-        List<ColumnConfigUsuario> configs = columnConfigUsuarioRepository.findByUsuarioAndClassName(usuario, className);
+        usuario = getUsuarioId();
+        logger.debug("[GridFilterUtil] Iniciando carregamento de sort_config para gridId: {}, usuarioId: {}, className: {}", this.gridId, usuario, this.className);
         
-        // Verificar se há alguma ordenação salva
+        if (columnConfigs == null || columnConfigs.isEmpty()) {
+            logger.warn("[GridFilterUtil] Lista columnConfigs está nula ou vazia para gridId: {}. Não é possível mapear fieldName para colunas.", this.gridId);
+            grid.sort(Collections.emptyList()); // Limpa ordenação se não há como mapear
+            return;
+        }
+        if (columnConfigUsuarioRepository == null) {
+            logger.warn("[GridFilterUtil] columnConfigUsuarioRepository é null. Não é possível carregar configurações de sort para gridId: {}", this.gridId);
+            grid.sort(Collections.emptyList());
+            return;
+        }
+
+        List<ColumnConfigUsuario> configs = columnConfigUsuarioRepository.findByUsuarioAndClassName(usuario, className);
+        logger.debug("[GridFilterUtil] Foram encontradas {} configurações de coluna para usuarioId: {}, className: {} em gridId: {}", configs.size(), usuario, this.className, this.gridId);
+        
         boolean foundSort = false;
         
         for (ColumnConfigUsuario config : configs) {
             if (config.getSort() != null && !config.getSort().isEmpty()) {
                 String sortFieldName = config.getFieldName();
-                String sortDirection = config.getSort();
-                logger.info("Sort_config carregado: gridId={}, sortColumn={}, sortDirection={}", 
-                    gridId, sortFieldName, sortDirection);
+                String sortDirectionSaved = config.getSort(); // Renomeado para evitar confusão com o enum
+                logger.info("[GridFilterUtil] Configuração de ordenação encontrada no DB para gridId: {}. fieldName: '{}', direction: '{}'", this.gridId, sortFieldName, sortDirectionSaved);
 
-                // Mapear fieldName para columnKey
                 Grid.Column<T> column = columnConfigs.stream()
-                    .filter(cfg -> cfg.getGridColumnConfig().getField().equals(sortFieldName))
+                    .filter(cfg -> cfg.getGridColumnConfig() != null && sortFieldName.equals(cfg.getGridColumnConfig().getField()))
                     .map(cfg -> cfg.column)
                     .findFirst()
                     .orElse(null);
 
                 if (column != null) {
-                    SortDirection direction = SortDirection.valueOf(sortDirection.toUpperCase());
-                    grid.sort(Collections.singletonList(new GridSortOrder<>(column, direction)));
-                    logger.debug("Ordenação aplicada ao grid: coluna={}, direção={}", sortFieldName, sortDirection);
-                    foundSort = true;
-                    break; // Apenas uma ordenação por grid
+                    logger.debug("[GridFilterUtil] Mapeado fieldName '{}' para Grid.Column com key '{}' para gridId: {}", sortFieldName, column.getKey(), this.gridId);
+                    try {
+                        SortDirection direction = SortDirection.valueOf(sortDirectionSaved.toUpperCase());
+                        grid.sort(Collections.singletonList(new GridSortOrder<>(column, direction)));
+                        logger.info("[GridFilterUtil] Ordenação aplicada ao gridId: {}. Coluna key: '{}', fieldName: '{}', direção: {}", this.gridId, column.getKey(), sortFieldName, direction);
+                        foundSort = true;
+                        break; 
+                    } catch (IllegalArgumentException iae) {
+                        logger.error("[GridFilterUtil] Direção de ordenação inválida ('{}') para fieldName '{}' no gridId: {}. Exceção: {}", sortDirectionSaved, sortFieldName, this.gridId, iae.getMessage());
+                    }
                 } else {
-                    logger.warn("Coluna com fieldName={} não encontrada para aplicar ordenação", sortFieldName);
+                    logger.warn("[GridFilterUtil] Coluna com fieldName='{}' (configurada para ordenação no DB) não foi encontrada no grid atual (gridId: {}). Ordenação não aplicada para esta configuração.", sortFieldName, this.gridId);
                 }
             }
         }
         
-        // Se não encontrou nenhuma ordenação, limpar qualquer ordenação existente
         if (!foundSort) {
-            logger.debug("Nenhuma ordenação encontrada, limpando ordenação do grid");
+            logger.info("[GridFilterUtil] Nenhuma configuração de ordenação válida foi encontrada ou aplicada para gridId: {}. Limpando ordenação do grid.", this.gridId);
             grid.sort(Collections.emptyList());
         }
+    } catch (IllegalStateException e) {
+        logger.error("[GridFilterUtil] Falha ao obter usuário para carregar sort_config para gridId: {}. Erro: {}", this.gridId, e.getMessage(), e);
+        // Não relançar, apenas logar. A UI não terá a ordenação salva.
     } catch (Exception e) {
-        logger.error("Erro ao carregar sort_config: {}", e.getMessage(), e);
+        logger.error("[GridFilterUtil] Erro ao carregar sort_config para gridId: {}. Usuário: {}. Erro: {}", this.gridId, usuario, e.getMessage(), e);
+        // Não relançar, a UI não terá a ordenação salva.
     }
 }
 
