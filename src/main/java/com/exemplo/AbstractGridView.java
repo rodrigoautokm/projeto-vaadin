@@ -209,11 +209,26 @@ public abstract class AbstractGridView<T> extends VerticalLayout implements Befo
             logger.error("Nenhuma coluna configurada para {}. GridFilterUtil não será inicializado.", title);
             return;
         }
-        ColumnConfigUsuarioRepository repository = applicationContext.getBean(ColumnConfigUsuarioRepository.class);
-        VwColumnConfigRepository vwRepository = applicationContext.getBean(VwColumnConfigRepository.class);
-        // Alteração: Adicionado vwRepository ao construtor de GridFilterUtil
-        gridUtil = new GridFilterUtil<T>(gridId, gridId, grid, columnConfigs, getUsuarioId(), getCdEmpresaUsuario(), repository, vwRepository);
-        logger.info("GridFilterUtil inicializado com gridId={}, usuarioId={}, cdEmpresa={}", gridId, getUsuarioId(), getCdEmpresaUsuario());
+
+        // Certifique-se que this.columnConfigUsuarioRepository e this.vwColumnConfigRepository estão injetados e não são nulos.
+        // Adicione verificações de nulidade se necessário, ou confie na garantia de injeção do Spring.
+        if (this.columnConfigUsuarioRepository == null || this.vwColumnConfigRepository == null) {
+            logger.error("Repositórios para GridFilterUtil não foram injetados corretamente em AbstractGridView para gridId: {}", gridId);
+            // Decida como tratar isso: talvez não inicializar gridUtil ou lançar uma exceção.
+            // Por agora, vamos logar e potencialmente pular a inicialização do gridUtil.
+            return; // Ou outra forma de tratamento de erro
+        }
+        gridUtil = new GridFilterUtil<T>(
+            this.getClass().getName(), // NOVO: Usar o nome completo da classe da View específica (ex: com.exemplo.ClienteView)
+            gridId,
+            grid,
+            columnConfigs,
+            getUsuarioId(),
+            getCdEmpresaUsuario(),
+            this.columnConfigUsuarioRepository, // Usar o campo injetado
+            this.vwColumnConfigRepository       // Usar o campo injetado
+        );
+        logger.info("GridFilterUtil inicializado com className={}, gridId={}, usuarioId={}, cdEmpresa={}", this.getClass().getName(), gridId, getUsuarioId(), getCdEmpresaUsuario());
         Component filterLayout = gridUtil.getLayout();
         if (filterLayout != null) {
             add(filterLayout);
