@@ -1,19 +1,14 @@
 package com.exemplo;
 
-import com.vaadin.flow.component.page.AppShellConfigurator;
-import com.vaadin.flow.server.PWA;
-import com.vaadin.flow.theme.Theme;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-@PWA(name = "My Application", shortName = "MyApp")
-@Theme
-@ComponentScan(basePackages = {"com.exemplo", "com.exemplo.admin"})
-public class Application implements AppShellConfigurator {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
+        System.out.println("Aplicação iniciada com sucesso.");
     }
 }

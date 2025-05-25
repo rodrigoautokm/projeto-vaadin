@@ -1,0 +1,1220 @@
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Maven home: C:\Program Files\apache\maven-3.9.6
+Java version: 17.0.9, vendor: Eclipse Adoptium, runtime: C:\Program Files\Eclipse Adoptium\jdk-17.0.9.9-hotspot
+Default locale: pt_BR, platform encoding: Cp1252
+OS name: "windows server 2019", version: "10.0", arch: "amd64", family: "windows"
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: javax.annotation.* < plexus.core
+[DEBUG]   Imported: javax.annotation.security.* < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution.scope < plexus.core
+[DEBUG]   Imported: org.apache.maven.graph < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.util < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.fusesource.jansi.* < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: org.slf4j.event.* < plexus.core
+[DEBUG]   Imported: org.slf4j.helpers.* < plexus.core
+[DEBUG]   Imported: org.slf4j.spi.* < plexus.core
+[DEBUG] Populating class realm maven.api
+[DEBUG] Created adapter factory; available factories [file-lock, rwlock-local, semaphore-local, noop]; available name mappers [discriminating, file-gav, file-hgav, file-static, gav, static]
+[INFO] Error stacktraces are turned on.
+[DEBUG] Message scheme: color
+[DEBUG] Message styles: debug info warning error success failure strong mojo project
+[DEBUG] Reading global settings from C:\Program Files\apache\maven-3.9.6\conf\settings.xml
+[DEBUG] Reading user settings from C:\Users\Administrator\.m2\settings.xml
+[DEBUG] Reading global toolchains from C:\Program Files\apache\maven-3.9.6\conf\toolchains.xml
+[DEBUG] Reading user toolchains from C:\Users\Administrator\.m2\toolchains.xml
+[DEBUG] Using local repository at C:\Users\Administrator\.m2\repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for C:\Users\Administrator\.m2\repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project com.exemplo:projeto-vaadin:jar:1.0-SNAPSHOT: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Creating adapter using nameMapper 'gav' and factory 'rwlock-local'
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: com.exemplo:projeto-vaadin:jar:1.0-SNAPSHOT
+[DEBUG] Tasks:   [clean, compile]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] ---------------------< com.exemplo:projeto-vaadin >---------------------
+[INFO] Building My Application 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.exemplo:projeto-vaadin:1.0-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile, compile+runtime]
+[DEBUG] Repositories (dependencies): [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${maven.clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <fast default-value="false">${maven.clean.fast}</fast>
+  <fastDir>${maven.clean.fastDir}</fastDir>
+  <fastMode default-value="background">${maven.clean.fastMode}</fastMode>
+  <followSymLinks default-value="false">${maven.clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.build.outputDirectory}"/>
+  <retryOnError default-value="true">${maven.clean.retryOnError}</retryOnError>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${maven.clean.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <addDefaultExcludes default-value="true"/>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}"/>
+  <escapeWindowsPaths default-value="true"/>
+  <fileNameFiltering default-value="false"/>
+  <includeEmptyDirs default-value="false"/>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false"/>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.resources.skip}</skip>
+  <supportMultiLineFiltering default-value="false"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          com.vaadin:vaadin-maven-plugin:23.2.9:prepare-frontend (default)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <applicationProperties default-value="${project.basedir}/src/main/resources/application.properties"/>
+  <eagerServerLoad default-value="${vaadin.eagerServerLoad}"/>
+  <frontendDirectory default-value="${project.basedir}/frontend/"/>
+  <generatedFolder default-value="${project.build.directory}/frontend/"/>
+  <generatedTsFolder default-value="${project.basedir}/frontend//generated"/>
+  <javaResourceFolder default-value="${project.basedir}/src/main/resources"/>
+  <javaSourceFolder default-value="${project.basedir}/src/main/java"/>
+  <nodeAutoUpdate default-value="false">${node.auto.update}</nodeAutoUpdate>
+  <nodeDownloadRoot>${node.download.root}</nodeDownloadRoot>
+  <nodeVersion default-value="v16.18.1">${node.version}</nodeVersion>
+  <npmFolder default-value="${project.basedir}"/>
+  <openApiJsonFile default-value="${project.build.directory}/generated-resources/openapi.json"/>
+  <pnpmEnable default-value="false">${pnpm.enable}</pnpmEnable>
+  <postinstallPackages default-value="">${npm.postinstallPackages}</postinstallPackages>
+  <productionMode default-value="${vaadin.productionMode}">false</productionMode>
+  <project default-value="${project}"/>
+  <projectBasedir default-value="${project.basedir}"/>
+  <projectBuildDir default-value="${project.build.directory}">${build.folder}</projectBuildDir>
+  <requireHomeNodeExec default-value="false">${require.home.node}</requireHomeNodeExec>
+  <resourceOutputDirectory default-value="${project.build.outputDirectory}/META-INF/VAADIN/"/>
+  <useDeprecatedV14Bootstrapping default-value="${vaadin.useDeprecatedV14Bootstrapping}"/>
+  <useGlobalPnpm default-value="false">${pnpm.global}</useGlobalPnpm>
+  <webpackOutputDirectory default-value="${project.build.outputDirectory}/META-INF/VAADIN/webapp/"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <compilePath default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerArgs>
+    <arg>-parameters</arg>
+    <arg>-Xlint:unchecked</arg>
+    <arg>-Xlint:deprecation</arg>
+  </compilerArgs>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <createMissingPackageInfoClass default-value="true">${maven.compiler.createMissingPackageInfoClass}</createMissingPackageInfoClass>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debugFileName default-value="javac"/>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <enablePreview default-value="false">${maven.compiler.enablePreview}</enablePreview>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <failOnWarning default-value="false">${maven.compiler.failOnWarning}</failOnWarning>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <parameters default-value="false">${maven.compiler.parameters}</parameters>
+  <project default-value="${project}"/>
+  <projectArtifact default-value="${project.artifact}"/>
+  <release>${maven.compiler.release}</release>
+  <session default-value="${session}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">true</showWarnings>
+  <skipMain>${maven.main.skip}</skipMain>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.7">17</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.7">17</target>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for apache.snapshots (http://repository.apache.org/snapshots).
+[DEBUG] Could not find metadata org.webjars.npm:mobile-drag-drop/maven-metadata.xml in local (C:\Users\Administrator\.m2\repository)
+[DEBUG] Skipped remote request for org.webjars.npm:mobile-drag-drop/maven-metadata.xml, locally cached metadata up-to-date
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for ow2-snapshot (http://repository.ow2.org/nexus/content/repositories/snapshots).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for vaadin-snapshots (http://oss.sonatype.org/content/repositories/vaadin-snapshots/).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for vaadin-releases (http://oss.sonatype.org/content/repositories/vaadin-releases/).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for releases.java.net (http://maven.java.net/content/repositories/releases/).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for shapshots.java.net (http://maven.java.net/content/repositories/snapshots/).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for jvnet-nexus-staging (http://maven.java.net/content/repositories/staging/).
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for netbeans (http://bits.netbeans.org/nexus/content/groups/netbeans).
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=6002400, ConflictMarker.markTime=1545200, ConflictMarker.nodeCount=333, ConflictIdSorter.graphTime=3580500, ConflictIdSorter.topsortTime=890500, ConflictIdSorter.conflictIdCount=173, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=40746900, ConflictResolver.conflictItemCount=329, DfDependencyCollector.collectTime=1868710500, DfDependencyCollector.transformTime=55886500}
+[DEBUG] com.exemplo:projeto-vaadin:jar:1.0-SNAPSHOT
+[DEBUG]    com.vaadin:vaadin-spring-boot-starter:jar:23.2.9:compile
+[DEBUG]       com.vaadin:vaadin-spring:jar:23.2.7:compile (version managed from 23.2.7)
+[DEBUG]          com.vaadin:flow-server:jar:23.2.7:compile (version managed from 23.2.7)
+[DEBUG]             com.vaadin.external.gwt:gwt-elemental:jar:2.8.2.vaadin2:compile
+[DEBUG]             commons-fileupload:commons-fileupload:jar:1.4:compile
+[DEBUG]             commons-io:commons-io:jar:2.11.0:compile
+[DEBUG]             com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile (version managed from 2.13.4)
+[DEBUG]             org.jsoup:jsoup:jar:1.15.3:compile
+[DEBUG]             com.helger:ph-css:jar:6.5.0:compile
+[DEBUG]                com.helger.commons:ph-commons:jar:10.1.6:compile
+[DEBUG]                   com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[DEBUG]             com.vaadin.external:gentyref:jar:1.2.0.vaadin1:compile
+[DEBUG]             org.apache.commons:commons-compress:jar:1.22:compile
+[DEBUG]             org.apache.httpcomponents:httpclient:jar:4.5.14:compile (version managed from 4.5.13) (exclusions managed from [commons-codec:commons-codec:*:*])
+[DEBUG]                org.apache.httpcomponents:httpcore:jar:4.4.16:compile (version managed from 4.4.16)
+[DEBUG]             commons-codec:commons-codec:jar:1.15:compile (version managed from 1.15)
+[DEBUG]          com.vaadin:flow-push:jar:23.2.7:compile (version managed from 23.2.7)
+[DEBUG]             com.vaadin.external.atmosphere:atmosphere-runtime:jar:2.7.3.slf4jvaadin4:compile
+[DEBUG]          com.vaadin:flow-client:jar:23.2.7:compile (version managed from 23.2.7)
+[DEBUG]          org.springframework:spring-websocket:jar:5.3.31:compile (version managed from 5.3.23)
+[DEBUG]          org.hibernate.validator:hibernate-validator:jar:6.2.5.Final:compile (version managed from 6.2.5.Final)
+[DEBUG]             jakarta.validation:jakarta.validation-api:jar:2.0.2:compile (version managed from 2.0.2)
+[DEBUG]       com.vaadin:vaadin-core:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-dev-server:jar:23.2.7:compile (version managed from 23.2.7)
+[DEBUG]             com.vaadin:license-checker:jar:1.11.2:compile (version managed from 1.11.2)
+[DEBUG]                com.github.oshi:oshi-core:jar:6.1.6:compile
+[DEBUG]                   net.java.dev.jna:jna:jar:5.11.0:compile (version managed from 5.11.0)
+[DEBUG]                   net.java.dev.jna:jna-platform:jar:5.11.0:compile (version managed from 5.11.0)
+[DEBUG]                com.nimbusds:nimbus-jose-jwt:jar:9.23:compile
+[DEBUG]                org.lucee:jcip-annotations:jar:1.0.0:compile
+[DEBUG]                com.vaadin:open:jar:8.4.0.3:compile
+[DEBUG]          com.vaadin:flow-lit-template:jar:23.2.7:compile (version managed from 23.2.7)
+[DEBUG]          com.vaadin:flow-polymer-template:jar:23.2.7:compile (version managed from 23.2.7)
+[DEBUG]          com.vaadin:flow-html-components:jar:23.2.7:compile (version managed from 23.2.7)
+[DEBUG]          com.vaadin:flow-data:jar:23.2.7:compile (version managed from 23.2.7)
+[DEBUG]             javax.validation:validation-api:jar:2.0.1.Final:compile (version managed from 2.0.1.Final)
+[DEBUG]          com.vaadin:flow-dnd:jar:23.2.7:compile (version managed from 23.2.7)
+[DEBUG]             org.webjars.npm:vaadin__vaadin-mobile-drag-drop:jar:1.0.1:compile
+[DEBUG]             org.webjars.npm:mobile-drag-drop:jar:2.3.0-rc.2:compile
+[DEBUG]          com.vaadin:vaadin-lumo-theme:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-material-theme:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-accordion-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-avatar-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]             com.vaadin:vaadin-flow-components-base:jar:23.2.9:compile
+[DEBUG]          com.vaadin:vaadin-button-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-checkbox-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-combo-box-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-confirm-dialog-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-custom-field-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-date-picker-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-date-time-picker-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-details-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-time-picker-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-select-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-dialog-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-form-layout-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-field-highlighter-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-grid-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]             org.apache.commons:commons-lang3:jar:3.12.0:compile (version managed from 3.12.0)
+[DEBUG]          com.vaadin:vaadin-icons-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-iron-list-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-virtual-list-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-list-box-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-login-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-messages-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-ordered-layout-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-progress-bar-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-radio-button-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-renderer-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-split-layout-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-tabs-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-text-field-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-upload-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-notification-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-app-layout-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-context-menu-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]          com.vaadin:vaadin-menu-bar-flow:jar:23.2.9:compile (version managed from 23.2.9)
+[DEBUG]    org.springframework.boot:spring-boot-starter-web:jar:2.7.18:compile
+[DEBUG]       org.springframework.boot:spring-boot-starter:jar:2.7.18:compile (version managed from 2.7.18)
+[DEBUG]          org.springframework.boot:spring-boot-starter-logging:jar:2.7.18:compile (version managed from 2.7.18)
+[DEBUG]             org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile (version managed from 2.17.2)
+[DEBUG]                org.apache.logging.log4j:log4j-api:jar:2.17.2:compile (version managed from 2.17.2)
+[DEBUG]             org.slf4j:jul-to-slf4j:jar:1.7.36:compile (version managed from 1.7.36)
+[DEBUG]          org.yaml:snakeyaml:jar:1.30:compile (version managed from 1.30)
+[DEBUG]       org.springframework.boot:spring-boot-starter-json:jar:2.7.18:compile (version managed from 2.7.18)
+[DEBUG]          com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile (version managed from 2.13.5)
+[DEBUG]             com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile (version managed from 2.13.5)
+[DEBUG]          com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile (version managed from 2.13.5)
+[DEBUG]          com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile (version managed from 2.13.5)
+[DEBUG]          com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile (version managed from 2.13.5)
+[DEBUG]       org.springframework:spring-web:jar:5.3.31:compile (version managed from 5.3.31)
+[DEBUG]       org.springframework:spring-webmvc:jar:5.3.31:compile (version managed from 5.3.31)
+[DEBUG]    org.springframework.boot:spring-boot-starter-data-jpa:jar:2.7.18:compile
+[DEBUG]       org.springframework.boot:spring-boot-starter-aop:jar:2.7.18:compile (version managed from 2.7.18)
+[DEBUG]          org.aspectj:aspectjweaver:jar:1.9.7:compile (version managed from 1.9.7)
+[DEBUG]       org.springframework.boot:spring-boot-starter-jdbc:jar:2.7.18:compile (version managed from 2.7.18)
+[DEBUG]          org.springframework:spring-jdbc:jar:5.3.31:compile (version managed from 5.3.31)
+[DEBUG]       jakarta.transaction:jakarta.transaction-api:jar:1.3.3:compile (version managed from 1.3.3)
+[DEBUG]       jakarta.persistence:jakarta.persistence-api:jar:2.2.3:compile (version managed from 2.2.3)
+[DEBUG]       org.hibernate:hibernate-core:jar:5.6.15.Final:compile (version managed from 5.6.15.Final)
+[DEBUG]          org.jboss.logging:jboss-logging:jar:3.4.3.Final:compile (version managed from 3.4.3.Final)
+[DEBUG]          net.bytebuddy:byte-buddy:jar:1.12.23:compile (version managed from 1.12.18)
+[DEBUG]          antlr:antlr:jar:2.7.7:compile (version managed from 2.7.7)
+[DEBUG]          org.jboss:jandex:jar:2.4.2.Final:compile
+[DEBUG]          com.fasterxml:classmate:jar:1.5.1:compile (version managed from 1.5.1)
+[DEBUG]          org.hibernate.common:hibernate-commons-annotations:jar:5.1.2.Final:compile
+[DEBUG]          org.glassfish.jaxb:jaxb-runtime:jar:2.3.9:compile (version managed from 2.3.1)
+[DEBUG]             org.glassfish.jaxb:txw2:jar:2.3.9:compile (version managed from 2.3.9)
+[DEBUG]             com.sun.istack:istack-commons-runtime:jar:3.0.12:compile
+[DEBUG]             com.sun.activation:jakarta.activation:jar:1.2.2:runtime (version managed from 1.2.2)
+[DEBUG]       org.springframework.data:spring-data-jpa:jar:2.7.18:compile (version managed from 2.7.18)
+[DEBUG]          org.springframework.data:spring-data-commons:jar:2.7.18:compile (version managed from 2.7.18)
+[DEBUG]          org.springframework:spring-orm:jar:5.3.31:compile (version managed from 5.3.31)
+[DEBUG]       org.springframework:spring-aspects:jar:5.3.31:compile (version managed from 5.3.31)
+[DEBUG]    javax.persistence:javax.persistence-api:jar:2.2:compile
+[DEBUG]    org.springframework.boot:spring-boot-starter-security:jar:2.7.18:compile
+[DEBUG]       org.springframework:spring-aop:jar:5.3.31:compile (version managed from 5.3.31)
+[DEBUG]       org.springframework.security:spring-security-config:jar:5.7.11:compile (version managed from 5.7.11)
+[DEBUG]          org.springframework.security:spring-security-core:jar:5.7.11:compile (version managed from 5.7.11)
+[DEBUG]             org.springframework.security:spring-security-crypto:jar:5.7.11:compile (version managed from 5.7.11)
+[DEBUG]       org.springframework.security:spring-security-web:jar:5.7.11:compile (version managed from 5.7.11)
+[DEBUG]    org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.18:provided
+[DEBUG]       jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile (version managed from 1.3.5)
+[DEBUG]       org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.83:provided (version managed from 9.0.83)
+[DEBUG]       org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.83:provided (version managed from 9.0.83)
+[DEBUG]       org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.83:provided (version managed from 9.0.83)
+[DEBUG]    com.sybase:sajdbc4:jar:17.0:compile
+[DEBUG]    org.springframework.boot:spring-boot-devtools:jar:2.7.18:compile (optional)
+[DEBUG]       org.springframework.boot:spring-boot:jar:2.7.18:compile (version managed from 2.7.18)
+[DEBUG]       org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile (version managed from 2.7.18)
+[DEBUG]    org.springframework.boot:spring-boot-starter-test:jar:2.7.18:test
+[DEBUG]       org.springframework.boot:spring-boot-test:jar:2.7.18:test (version managed from 2.7.18)
+[DEBUG]       org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.18:test (version managed from 2.7.18)
+[DEBUG]       com.jayway.jsonpath:json-path:jar:2.7.0:test (version managed from 2.7.0)
+[DEBUG]          net.minidev:json-smart:jar:2.4.11:test (version managed from 2.4.7)
+[DEBUG]             net.minidev:accessors-smart:jar:2.4.11:test
+[DEBUG]                org.ow2.asm:asm:jar:9.3:test
+[DEBUG]       jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile (version managed from 2.3.3)
+[DEBUG]          jakarta.activation:jakarta.activation-api:jar:1.2.2:compile (version managed from 1.2.2)
+[DEBUG]       org.assertj:assertj-core:jar:3.22.0:test (version managed from 3.22.0)
+[DEBUG]       org.hamcrest:hamcrest:jar:2.2:test (version managed from 2.2)
+[DEBUG]       org.junit.jupiter:junit-jupiter:jar:5.8.2:test (version managed from 5.8.2)
+[DEBUG]          org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test (version managed from 5.8.2)
+[DEBUG]             org.opentest4j:opentest4j:jar:1.2.0:test
+[DEBUG]             org.junit.platform:junit-platform-commons:jar:1.8.2:test (version managed from 1.8.2)
+[DEBUG]             org.apiguardian:apiguardian-api:jar:1.1.2:test
+[DEBUG]          org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test (version managed from 5.8.2)
+[DEBUG]          org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test (version managed from 5.8.2)
+[DEBUG]             org.junit.platform:junit-platform-engine:jar:1.8.2:test (version managed from 1.8.2)
+[DEBUG]       org.mockito:mockito-core:jar:4.5.1:test (version managed from 4.5.1)
+[DEBUG]          net.bytebuddy:byte-buddy-agent:jar:1.12.23:test (version managed from 1.12.9)
+[DEBUG]          org.objenesis:objenesis:jar:3.2:test
+[DEBUG]       org.mockito:mockito-junit-jupiter:jar:4.5.1:test (version managed from 4.5.1)
+[DEBUG]       org.skyscreamer:jsonassert:jar:1.5.1:test (version managed from 1.5.1)
+[DEBUG]          com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[DEBUG]       org.springframework:spring-core:jar:5.3.31:compile (version managed from 5.3.31)
+[DEBUG]          org.springframework:spring-jcl:jar:5.3.31:compile (version managed from 5.3.31)
+[DEBUG]       org.springframework:spring-test:jar:5.3.31:test (version managed from 5.3.31)
+[DEBUG]       org.xmlunit:xmlunit-core:jar:2.9.1:test (version managed from 2.9.1)
+[DEBUG]    org.slf4j:slf4j-api:jar:1.7.36:compile
+[DEBUG]    ch.qos.logback:logback-classic:jar:1.2.12:compile
+[DEBUG]       ch.qos.logback:logback-core:jar:1.2.12:compile (version managed from 1.2.12)
+[DEBUG]    org.slf4j:jcl-over-slf4j:jar:1.7.36:compile
+[DEBUG]    commons-logging:commons-logging:jar:1.2:compile
+[DEBUG]    javax.xml.bind:jaxb-api:jar:2.3.1:compile
+[DEBUG]       javax.activation:javax.activation-api:jar:1.2.0:compile (version managed from 1.2.0)
+[DEBUG]    com.sun.xml.bind:jaxb-impl:jar:2.3.1:compile
+[DEBUG]    javax.annotation:javax.annotation-api:jar:1.3.2:compile
+[DEBUG]    org.springframework:spring-tx:jar:5.3.31:compile
+[DEBUG]       org.springframework:spring-beans:jar:5.3.31:compile (version managed from 5.3.31)
+[DEBUG]    org.springframework:spring-context:jar:5.3.31:compile
+[DEBUG]       org.springframework:spring-expression:jar:5.3.31:compile (version managed from 5.3.31)
+[DEBUG]    com.zaxxer:HikariCP:jar:5.0.1:compile
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ projeto-vaadin ---
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=40800, ConflictMarker.markTime=36900, ConflictMarker.nodeCount=3, ConflictIdSorter.graphTime=25200, ConflictIdSorter.topsortTime=17200, ConflictIdSorter.conflictIdCount=3, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=269100, ConflictResolver.conflictItemCount=3, DfDependencyCollector.collectTime=33155300, DfDependencyCollector.transformTime=416800}
+[DEBUG] org.apache.maven.plugins:maven-clean-plugin:jar:3.2.0
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:3.3.4:compile
+[DEBUG]       commons-io:commons-io:jar:2.6:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-clean-plugin:3.2.0
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-clean-plugin:3.2.0
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-clean-plugin:3.2.0
+[DEBUG]   Included: org.apache.maven.plugins:maven-clean-plugin:jar:3.2.0
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.3.4
+[DEBUG]   Included: commons-io:commons-io:jar:2.6
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:3.2.0, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@659e0bfd]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean:default-clean' with basic configurator -->
+[DEBUG]   (f) directory = D:\projeto-vaadin\target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) fast = false
+[DEBUG]   (f) fastMode = background
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = D:\projeto-vaadin\target\classes
+[DEBUG]   (f) reportDirectory = D:\projeto-vaadin\target\classes
+[DEBUG]   (f) retryOnError = true
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@6e6d4780
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = D:\projeto-vaadin\target\test-classes
+[DEBUG] -- end configuration --
+[DEBUG] Skipping non-existing directory D:\projeto-vaadin\target
+[DEBUG] Skipping non-existing directory D:\projeto-vaadin\target\classes
+[DEBUG] Skipping non-existing directory D:\projeto-vaadin\target\test-classes
+[DEBUG] Skipping non-existing directory D:\projeto-vaadin\target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ projeto-vaadin ---
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=68100, ConflictMarker.markTime=30600, ConflictMarker.nodeCount=13, ConflictIdSorter.graphTime=236100, ConflictIdSorter.topsortTime=21400, ConflictIdSorter.conflictIdCount=9, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=234900, ConflictResolver.conflictItemCount=13, DfDependencyCollector.collectTime=74535100, DfDependencyCollector.transformTime=620200}
+[DEBUG] org.apache.maven.plugins:maven-resources-plugin:jar:3.3.1
+[DEBUG]    org.codehaus.plexus:plexus-interpolation:jar:1.26:runtime
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.5.1:compile
+[DEBUG]    org.apache.maven.shared:maven-filtering:jar:3.3.1:compile
+[DEBUG]       javax.inject:javax.inject:jar:1:compile
+[DEBUG]       org.slf4j:slf4j-api:jar:1.7.36:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile
+[DEBUG]    commons-io:commons-io:jar:2.11.0:compile
+[DEBUG]    org.apache.commons:commons-lang3:jar:3.12.0:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1
+[DEBUG]   Included: org.apache.maven.plugins:maven-resources-plugin:jar:3.3.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.26
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.5.1
+[DEBUG]   Included: org.apache.maven.shared:maven-filtering:jar:3.3.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.7
+[DEBUG]   Included: commons-io:commons-io:jar:2.11.0
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.12.0
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:3.3.1, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@659e0bfd]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-resources-plugin:3.3.1:resources:default-resources' with basic configurator -->
+[DEBUG]   (f) addDefaultExcludes = true
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (f) fileNameFiltering = false
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = D:\projeto-vaadin\target\classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: com.exemplo:projeto-vaadin:1.0-SNAPSHOT @ D:\projeto-vaadin\pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: D:\projeto-vaadin\src\main\resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@6e6d4780
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used:
+[DEBUG] classworlds.conf: C:\Program Files\apache\maven-3.9.6\bin\m2.conf
+[DEBUG] env.=::: ::\
+[DEBUG] env.=C:: C:\
+[DEBUG] env.=D:: D:\projeto-vaadin
+[DEBUG] env.=EXITCODE: 00000001
+[DEBUG] env.ALLUSERSPROFILE: C:\ProgramData
+[DEBUG] env.APPDATA: C:\Users\Administrator\AppData\Roaming
+[DEBUG] env.ASANY9: C:\Program Files\Sybase\SQL Anywhere 9
+[DEBUG] env.ASANYSAMP9: C:\Users\Public\Documents\SQL Anywhere 9\Samples
+[DEBUG] env.ASANYSH9: C:\Program Files\Sybase\Shared
+[DEBUG] env.AWS_EXECUTION_ENV: EC2
+[DEBUG] env.CLASSWORLDS_JAR: "C:\Program Files\apache\maven-3.9.6\boot\plexus-classworlds-2.8.0.jar"
+[DEBUG] env.CLASSWORLDS_LAUNCHER: org.codehaus.plexus.classworlds.launcher.Launcher
+[DEBUG] env.CLIENTNAME: EC2AMAZ-B977NT6
+[DEBUG] env.COMMONPROGRAMFILES: C:\Program Files\Common Files
+[DEBUG] env.COMMONPROGRAMFILES(X86): C:\Program Files (x86)\Common Files
+[DEBUG] env.COMMONPROGRAMW6432: C:\Program Files\Common Files
+[DEBUG] env.COMPUTERNAME: EC2AMAZ-I45D3OT
+[DEBUG] env.COMSPEC: C:\Windows\system32\cmd.exe
+[DEBUG] env.DRIVERDATA: C:\Windows\System32\Drivers\DriverData
+[DEBUG] env.EC2LAUNCH_TELEMETRY: 1
+[DEBUG] env.ERROR_CODE: 0
+[DEBUG] env.EXEC_DIR: D:\projeto-vaadin
+[DEBUG] env.HOMEDRIVE: C:
+[DEBUG] env.HOMEPATH: \Users\Administrator
+[DEBUG] env.JAVACMD: C:\Program Files\Eclipse Adoptium\jdk-17.0.9.9-hotspot\bin\java.exe
+[DEBUG] env.JAVA_HOME: C:\Program Files\Eclipse Adoptium\jdk-17.0.9.9-hotspot
+[DEBUG] env.JVMCONFIG: \.mvn\jvm.config
+[DEBUG] env.LOCALAPPDATA: C:\Users\Administrator\AppData\Local
+[DEBUG] env.LOGONSERVER: \\EC2AMAZ-I45D3OT
+[DEBUG] env.MAVEN_CMD_LINE_ARGS: clean compile -X
+[DEBUG] env.MAVEN_HOME: C:\Program Files\apache\maven-3.9.6
+[DEBUG] env.MAVEN_PROJECTBASEDIR: D:\projeto-vaadin
+[DEBUG] env.NODE_PATH: C:\Program Files\SQL Anywhere 17\Node
+[DEBUG] env.NUMBER_OF_PROCESSORS: 2
+[DEBUG] env.OS: Windows_NT
+[DEBUG] env.PATH: C:\Program Files\Eclipse Adoptium\jdk-17.0.9.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.9.9-hotspot\bin;C:\Program Files\Apache\maven-3.9.6\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Amazon\cfn-bootstrap\;C:\Program Files\Sybase\SQL Anywhere 9\x64;C:\Program Files\Sybase\SQL Anywhere 9\win32;C:\Program Files\Sybase\Shared\win32;C:\Program Files\Sybase\Shared\Sybase Central 4.3\win32;C:\Program Files (x86)\Sybase\Shared\PowerBuilder\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\SQL Anywhere 17\bin64;C:\Program Files\SQL Anywhere 17\bin32;C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Administrator\AppData\Local\Programs\Python\Python313\;C:\Program Files (x86)\Sybase\Shared\PowerBuilder\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;D:\ffmpeg\bin;C:\Users\Administrator\AppData\Roaming\npm
+[DEBUG] env.PATHEXT: .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+[DEBUG] env.PROCESSOR_ARCHITECTURE: AMD64
+[DEBUG] env.PROCESSOR_IDENTIFIER: Intel64 Family 6 Model 85 Stepping 7, GenuineIntel
+[DEBUG] env.PROCESSOR_LEVEL: 6
+[DEBUG] env.PROCESSOR_REVISION: 5507
+[DEBUG] env.PROGRAMDATA: C:\ProgramData
+[DEBUG] env.PROGRAMFILES: C:\Program Files
+[DEBUG] env.PROGRAMFILES(X86): C:\Program Files (x86)
+[DEBUG] env.PROGRAMW6432: C:\Program Files
+[DEBUG] env.PROMPT: $P$G
+[DEBUG] env.PSMODULEPATH: C:\Windows\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files\WindowsPowerShell\Modules
+[DEBUG] env.PUBLIC: C:\Users\Public
+[DEBUG] env.SESSIONNAME: RDP-Tcp#1
+[DEBUG] env.SQLANY17: C:\Program Files\SQL Anywhere 17
+[DEBUG] env.SQLANY9: E:\diretrix\banco
+[DEBUG] env.SQLANYSAMP17: C:\Users\Public\Documents\SQL Anywhere 17\Samples
+[DEBUG] env.SYSTEMDRIVE: C:
+[DEBUG] env.SYSTEMROOT: C:\Windows
+[DEBUG] env.TEMP: C:\Users\ADMINI~1\AppData\Local\Temp\2
+[DEBUG] env.TMP: C:\Users\ADMINI~1\AppData\Local\Temp\2
+[DEBUG] env.USERDOMAIN: EC2AMAZ-I45D3OT
+[DEBUG] env.USERDOMAIN_ROAMINGPROFILE: EC2AMAZ-I45D3OT
+[DEBUG] env.USERNAME: Administrator
+[DEBUG] env.USERPROFILE: C:\Users\Administrator
+[DEBUG] env.WDIR: D:\
+[DEBUG] env.WINDIR: C:\Windows
+[DEBUG] file.encoding: Cp1252
+[DEBUG] file.separator: \
+[DEBUG] java.class.path: C:\Program Files\apache\maven-3.9.6\boot\plexus-classworlds-2.8.0.jar
+[DEBUG] java.class.version: 61.0
+[DEBUG] java.home: C:\Program Files\Eclipse Adoptium\jdk-17.0.9.9-hotspot
+[DEBUG] java.io.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp\2\
+[DEBUG] java.library.path: C:\Program Files\Eclipse Adoptium\jdk-17.0.9.9-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Eclipse Adoptium\jdk-17.0.9.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.9.9-hotspot\bin;C:\Program Files\Apache\maven-3.9.6\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Amazon\cfn-bootstrap\;C:\Program Files\Sybase\SQL Anywhere 9\x64;C:\Program Files\Sybase\SQL Anywhere 9\win32;C:\Program Files\Sybase\Shared\win32;C:\Program Files\Sybase\Shared\Sybase Central 4.3\win32;C:\Program Files (x86)\Sybase\Shared\PowerBuilder\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\SQL Anywhere 17\bin64;C:\Program Files\SQL Anywhere 17\bin32;C:\Users\Administrator\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Administrator\AppData\Local\Programs\Python\Python313\;C:\Program Files (x86)\Sybase\Shared\PowerBuilder\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;D:\ffmpeg\bin;C:\Users\Administrator\AppData\Roaming\npm;.
+[DEBUG] java.runtime.name: OpenJDK Runtime Environment
+[DEBUG] java.runtime.version: 17.0.9+9
+[DEBUG] java.specification.name: Java Platform API Specification
+[DEBUG] java.specification.vendor: Oracle Corporation
+[DEBUG] java.specification.version: 17
+[DEBUG] java.vendor: Eclipse Adoptium
+[DEBUG] java.vendor.url: https://adoptium.net/
+[DEBUG] java.vendor.url.bug: https://github.com/adoptium/adoptium-support/issues
+[DEBUG] java.vendor.version: Temurin-17.0.9+9
+[DEBUG] java.version: 17.0.9
+[DEBUG] java.version.date: 2023-10-17
+[DEBUG] java.vm.compressedOopsMode: 32-bit
+[DEBUG] java.vm.info: mixed mode, sharing
+[DEBUG] java.vm.name: OpenJDK 64-Bit Server VM
+[DEBUG] java.vm.specification.name: Java Virtual Machine Specification
+[DEBUG] java.vm.specification.vendor: Oracle Corporation
+[DEBUG] java.vm.specification.version: 17
+[DEBUG] java.vm.vendor: Eclipse Adoptium
+[DEBUG] java.vm.version: 17.0.9+9
+[DEBUG] jdk.debug: release
+[DEBUG] library.jansi.path: C:\Program Files\apache\maven-3.9.6\lib\jansi-native
+[DEBUG] line.separator: 
+
+[DEBUG] maven.build.timestamp: 2025-05-18T14:03:50Z
+[DEBUG] maven.build.version: Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+[DEBUG] maven.compiler.source: 17
+[DEBUG] maven.compiler.target: 17
+[DEBUG] maven.conf: C:\Program Files\apache\maven-3.9.6/conf
+[DEBUG] maven.home: C:\Program Files\apache\maven-3.9.6
+[DEBUG] maven.multiModuleProjectDirectory: D:\projeto-vaadin
+[DEBUG] maven.version: 3.9.9
+[DEBUG] native.encoding: Cp1252
+[DEBUG] os.arch: amd64
+[DEBUG] os.name: Windows Server 2019
+[DEBUG] os.version: 10.0
+[DEBUG] path.separator: ;
+[DEBUG] project.baseUri: file:/D:/projeto-vaadin/
+[DEBUG] project.build.sourceEncoding: UTF-8
+[DEBUG] project.reporting.outputEncoding: UTF-8
+[DEBUG] spring-boot.version: 2.7.18
+[DEBUG] sun.arch.data.model: 64
+[DEBUG] sun.boot.library.path: C:\Program Files\Eclipse Adoptium\jdk-17.0.9.9-hotspot\bin
+[DEBUG] sun.cpu.endian: little
+[DEBUG] sun.cpu.isalist: amd64
+[DEBUG] sun.io.unicode.encoding: UnicodeLittle
+[DEBUG] sun.java.command: org.codehaus.plexus.classworlds.launcher.Launcher clean compile -X
+[DEBUG] sun.java.launcher: SUN_STANDARD
+[DEBUG] sun.jnu.encoding: Cp1252
+[DEBUG] sun.management.compiler: HotSpot 64-Bit Tiered Compilers
+[DEBUG] sun.os.patch.level: 
+[DEBUG] sun.stderr.encoding: UTF-8
+[DEBUG] user.country: BR
+[DEBUG] user.dir: D:\projeto-vaadin
+[DEBUG] user.home: C:\Users\Administrator
+[DEBUG] user.language: pt
+[DEBUG] user.name: Administrator
+[DEBUG] user.script: 
+[DEBUG] user.variant: 
+[DEBUG] vaadin.version: 23.2.9
+[DEBUG] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] Using 'UTF-8' encoding to copy filtered properties files.
+[DEBUG] resource with targetPath null
+directory D:\projeto-vaadin\src\main\resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 5 resources from src\main\resources to target\classes
+[DEBUG] Copying file application.properties
+[DEBUG] file application.properties has a filtered file extension
+[DEBUG] Using 'UTF-8' encoding to copy filtered resource 'application.properties'.
+[DEBUG] copy D:\projeto-vaadin\src\main\resources\application.properties to D:\projeto-vaadin\target\classes\application.properties
+[DEBUG] Copying file META-INF\resources\styles\shared-styles.css
+[DEBUG] file shared-styles.css has a filtered file extension
+[DEBUG] Using 'UTF-8' encoding to copy filtered resource 'shared-styles.css'.
+[DEBUG] copy D:\projeto-vaadin\src\main\resources\META-INF\resources\styles\shared-styles.css to D:\projeto-vaadin\target\classes\META-INF\resources\styles\shared-styles.css
+[DEBUG] Copying file static\sw.js
+[DEBUG] file sw.js has a filtered file extension
+[DEBUG] Using 'UTF-8' encoding to copy filtered resource 'sw.js'.
+[DEBUG] copy D:\projeto-vaadin\src\main\resources\static\sw.js to D:\projeto-vaadin\target\classes\static\sw.js
+[DEBUG] Copying file teste.bat
+[DEBUG] file teste.bat has a filtered file extension
+[DEBUG] Using 'UTF-8' encoding to copy filtered resource 'teste.bat'.
+[DEBUG] copy D:\projeto-vaadin\src\main\resources\teste.bat to D:\projeto-vaadin\target\classes\teste.bat
+[DEBUG] Copying file {
+[DEBUG] file { has a filtered file extension
+[DEBUG] Using 'UTF-8' encoding to copy filtered resource '{'.
+[DEBUG] copy D:\projeto-vaadin\src\main\resources\{ to D:\projeto-vaadin\target\classes\{
+[DEBUG] no user filter components
+[INFO] 
+[INFO] --- vaadin:23.2.9:prepare-frontend (default) @ projeto-vaadin ---
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for glassfish-repository (http://download.java.net/maven/glassfish).
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=412400, ConflictMarker.markTime=77300, ConflictMarker.nodeCount=69, ConflictIdSorter.graphTime=36300, ConflictIdSorter.topsortTime=63300, ConflictIdSorter.conflictIdCount=41, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1986100, ConflictResolver.conflictItemCount=65, DfDependencyCollector.collectTime=194443200, DfDependencyCollector.transformTime=2618500}
+[DEBUG] com.vaadin:vaadin-maven-plugin:jar:23.2.9
+[DEBUG]    com.vaadin:flow-maven-plugin:jar:23.2.7:compile
+[DEBUG]       com.vaadin:flow-plugin-base:jar:23.2.7:compile
+[DEBUG]          com.vaadin:flow-server:jar:23.2.7:compile
+[DEBUG]             com.vaadin:flow-push:jar:23.2.7:compile
+[DEBUG]                com.vaadin.external.atmosphere:atmosphere-runtime:jar:2.7.3.slf4jvaadin4:compile
+[DEBUG]             javax.annotation:javax.annotation-api:jar:1.3.2:compile
+[DEBUG]             com.vaadin.external.gwt:gwt-elemental:jar:2.8.2.vaadin2:compile
+[DEBUG]             commons-fileupload:commons-fileupload:jar:1.4:compile
+[DEBUG]             org.jsoup:jsoup:jar:1.15.3:compile
+[DEBUG]             com.helger:ph-css:jar:6.5.0:compile
+[DEBUG]                com.helger.commons:ph-commons:jar:10.1.6:compile
+[DEBUG]             net.bytebuddy:byte-buddy:jar:1.12.18:compile
+[DEBUG]             com.vaadin.external:gentyref:jar:1.2.0.vaadin1:compile
+[DEBUG]          com.vaadin:license-checker:jar:1.11.2:compile
+[DEBUG]             com.github.oshi:oshi-core:jar:6.1.6:compile
+[DEBUG]                net.java.dev.jna:jna:jar:5.11.0:compile
+[DEBUG]                net.java.dev.jna:jna-platform:jar:5.11.0:compile
+[DEBUG]             com.nimbusds:nimbus-jose-jwt:jar:9.23:compile
+[DEBUG]             org.lucee:jcip-annotations:jar:1.0.0:compile
+[DEBUG]             com.vaadin:open:jar:8.4.0.3:compile
+[DEBUG]          org.reflections:reflections:jar:0.10.2:compile
+[DEBUG]             org.javassist:javassist:jar:3.28.0-GA:compile
+[DEBUG]             com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[DEBUG]          org.zeroturnaround:zt-exec:jar:1.12:compile
+[DEBUG]          javax.servlet:javax.servlet-api:jar:3.1.0:compile
+[DEBUG]       com.google.gwt:gwt-elemental:jar:2.9.0:compile
+[DEBUG]       com.github.eirslett:frontend-plugin-core:jar:1.12.1:compile
+[DEBUG]          commons-io:commons-io:jar:2.11.0:compile
+[DEBUG]          org.apache.commons:commons-exec:jar:1.3:compile
+[DEBUG]          org.codehaus.plexus:plexus-utils:jar:3.0.22:compile
+[DEBUG]          org.slf4j:slf4j-api:jar:1.7.5:compile
+[DEBUG]       com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile
+[DEBUG]       com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile
+[DEBUG]          com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile
+[DEBUG]       org.apache.commons:commons-compress:jar:1.22:compile
+[DEBUG]       org.apache.httpcomponents:httpclient:jar:4.5.13:compile
+[DEBUG]          org.apache.httpcomponents:httpcore:jar:4.4.13:compile
+[DEBUG]          commons-logging:commons-logging:jar:1.2:compile
+[DEBUG]          commons-codec:commons-codec:jar:1.11:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile
+[DEBUG] Created new class realm plugin>com.vaadin:vaadin-maven-plugin:23.2.9
+[DEBUG] Importing foreign packages into class realm plugin>com.vaadin:vaadin-maven-plugin:23.2.9
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>com.vaadin:vaadin-maven-plugin:23.2.9
+[DEBUG]   Included: com.vaadin:vaadin-maven-plugin:jar:23.2.9
+[DEBUG]   Included: com.vaadin:flow-maven-plugin:jar:23.2.7
+[DEBUG]   Included: com.vaadin:flow-plugin-base:jar:23.2.7
+[DEBUG]   Included: com.vaadin:flow-server:jar:23.2.7
+[DEBUG]   Included: com.vaadin:flow-push:jar:23.2.7
+[DEBUG]   Included: com.vaadin.external.atmosphere:atmosphere-runtime:jar:2.7.3.slf4jvaadin4
+[DEBUG]   Included: com.vaadin.external.gwt:gwt-elemental:jar:2.8.2.vaadin2
+[DEBUG]   Included: commons-fileupload:commons-fileupload:jar:1.4
+[DEBUG]   Included: org.jsoup:jsoup:jar:1.15.3
+[DEBUG]   Included: com.helger:ph-css:jar:6.5.0
+[DEBUG]   Included: com.helger.commons:ph-commons:jar:10.1.6
+[DEBUG]   Included: net.bytebuddy:byte-buddy:jar:1.12.18
+[DEBUG]   Included: com.vaadin.external:gentyref:jar:1.2.0.vaadin1
+[DEBUG]   Included: com.vaadin:license-checker:jar:1.11.2
+[DEBUG]   Included: com.github.oshi:oshi-core:jar:6.1.6
+[DEBUG]   Included: net.java.dev.jna:jna:jar:5.11.0
+[DEBUG]   Included: net.java.dev.jna:jna-platform:jar:5.11.0
+[DEBUG]   Included: com.nimbusds:nimbus-jose-jwt:jar:9.23
+[DEBUG]   Included: org.lucee:jcip-annotations:jar:1.0.0
+[DEBUG]   Included: com.vaadin:open:jar:8.4.0.3
+[DEBUG]   Included: org.reflections:reflections:jar:0.10.2
+[DEBUG]   Included: org.javassist:javassist:jar:3.28.0-GA
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:3.0.2
+[DEBUG]   Included: org.zeroturnaround:zt-exec:jar:1.12
+[DEBUG]   Included: javax.servlet:javax.servlet-api:jar:3.1.0
+[DEBUG]   Included: com.google.gwt:gwt-elemental:jar:2.9.0
+[DEBUG]   Included: com.github.eirslett:frontend-plugin-core:jar:1.12.1
+[DEBUG]   Included: commons-io:commons-io:jar:2.11.0
+[DEBUG]   Included: org.apache.commons:commons-exec:jar:1.3
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.22
+[DEBUG]   Included: com.fasterxml.jackson.core:jackson-core:jar:2.13.4
+[DEBUG]   Included: com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2
+[DEBUG]   Included: com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4
+[DEBUG]   Included: org.apache.commons:commons-compress:jar:1.22
+[DEBUG]   Included: org.apache.httpcomponents:httpclient:jar:4.5.13
+[DEBUG]   Included: org.apache.httpcomponents:httpcore:jar:4.4.13
+[DEBUG]   Included: commons-logging:commons-logging:jar:1.2
+[DEBUG]   Included: commons-codec:commons-codec:jar:1.11
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.7
+[DEBUG] Loading mojo com.vaadin:vaadin-maven-plugin:23.2.9:prepare-frontend from plugin realm ClassRealm[plugin>com.vaadin:vaadin-maven-plugin:23.2.9, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@659e0bfd]
+[DEBUG] Configuring mojo execution 'com.vaadin:vaadin-maven-plugin:23.2.9:prepare-frontend:default' with basic configurator -->
+[DEBUG]   (f) applicationProperties = D:\projeto-vaadin\src\main\resources\application.properties
+[DEBUG]   (f) frontendDirectory = D:\projeto-vaadin\frontend
+[DEBUG]   (f) generatedFolder = D:\projeto-vaadin\target\frontend
+[DEBUG]   (f) generatedTsFolder = D:\projeto-vaadin\frontend\generated
+[DEBUG]   (f) javaResourceFolder = D:\projeto-vaadin\src\main\resources
+[DEBUG]   (f) javaSourceFolder = D:\projeto-vaadin\src\main\java
+[DEBUG]   (f) nodeAutoUpdate = false
+[DEBUG]   (f) nodeVersion = v16.18.1
+[DEBUG]   (f) npmFolder = D:\projeto-vaadin
+[DEBUG]   (f) openApiJsonFile = D:\projeto-vaadin\target\generated-resources\openapi.json
+[DEBUG]   (f) pnpmEnable = false
+[DEBUG]   (f) postinstallPackages = []
+[DEBUG]   (f) productionMode = false
+[DEBUG]   (f) project = MavenProject: com.exemplo:projeto-vaadin:1.0-SNAPSHOT @ D:\projeto-vaadin\pom.xml
+[DEBUG]   (f) projectBasedir = D:\projeto-vaadin
+[DEBUG]   (f) projectBuildDir = D:\projeto-vaadin\target
+[DEBUG]   (f) requireHomeNodeExec = false
+[DEBUG]   (f) resourceOutputDirectory = D:\projeto-vaadin\target\classes\META-INF\VAADIN
+[DEBUG]   (f) useGlobalPnpm = false
+[DEBUG]   (f) webpackOutputDirectory = D:\projeto-vaadin\target\classes\META-INF\VAADIN\webapp
+[DEBUG] -- end configuration --
+[DEBUG] 
+>>> Running prepare-frontend
+System.properties:
+ productionMode: false
+ webpackPort: null
+ project.basedir: D:\projeto-vaadin
+Goal parameters:
+ productionMode: false
+ npmFolder: D:\projeto-vaadin
+Token file: D:\projeto-vaadin\target\classes\META-INF\VAADIN\config\flow-build-info.json
+Token content: {"productionMode":false,"useDeprecatedV14Bootstrapping":false,"eagerServerLoad":false,"npmFolder":"D:\\projeto-vaadin","node.version":"v16.18.1","node.download.root":"https://nodejs.org/dist/","generatedFolder":"D:\\projeto-vaadin\\target\\frontend","frontendFolder":"D:\\projeto-vaadin\\frontend","connect.javaSourceFolder":"D:\\projeto-vaadin\\src\\main\\java","javaResourceFolder":"D:\\projeto-vaadin\\src\\main\\resources","connect.applicationProperties":"D:\\projeto-vaadin\\src\\main\\resources\\application.properties","connect.openApiFile":"D:\\projeto-vaadin\\target\\generated-resources\\openapi.json","project.frontend.generated":"D:\\projeto-vaadin\\frontend\\generated","pnpm.enable":false,"require.home.node":false,"build.folder":"target"}
+
+[DEBUG] Using node 18.17.1 located at C:\Program Files\nodejs\node.exe
+[DEBUG] Using npm 9.6.7 located at C:\Program Files\nodejs\npm.cmd
+[INFO] Reflections took 4281 ms to scan 145 urls, producing 7689 keys and 38076 values
+[DEBUG] writing file D:\projeto-vaadin\target\flow-frontend\package.json.
+[INFO] Copying frontend resources from jar files ...
+[INFO] Visited 148 resources. Took 364 ms.
+[DEBUG] Created vite generated configuration file: 'D:\projeto-vaadin\vite.generated.ts'
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ projeto-vaadin ---
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=76000, ConflictMarker.markTime=35900, ConflictMarker.nodeCount=17, ConflictIdSorter.graphTime=30000, ConflictIdSorter.topsortTime=21500, ConflictIdSorter.conflictIdCount=12, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=991600, ConflictResolver.conflictItemCount=17, DfDependencyCollector.collectTime=88767900, DfDependencyCollector.transformTime=1185900}
+[DEBUG] org.apache.maven.plugins:maven-compiler-plugin:jar:3.10.1
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:3.3.4:compile
+[DEBUG]       commons-io:commons-io:jar:2.6:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-incremental:jar:1.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:2.0.0:compile (version managed from default)
+[DEBUG]    org.codehaus.plexus:plexus-java:jar:1.1.1:compile
+[DEBUG]       org.ow2.asm:asm:jar:9.2:compile
+[DEBUG]       com.thoughtworks.qdox:qdox:jar:2.0.1:compile (version managed from default)
+[DEBUG]    org.codehaus.plexus:plexus-compiler-api:jar:2.11.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:3.4.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-manager:jar:2.11.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-javac:jar:2.11.1:runtime
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.10.1
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.10.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.10.1
+[DEBUG]   Included: org.apache.maven.plugins:maven-compiler-plugin:jar:3.10.1
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.3.4
+[DEBUG]   Included: commons-io:commons-io:jar:2.6
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-incremental:jar:1.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:2.0.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-java:jar:1.1.1
+[DEBUG]   Included: org.ow2.asm:asm:jar:9.2
+[DEBUG]   Included: com.thoughtworks.qdox:qdox:jar:2.0.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-api:jar:2.11.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.4.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-manager:jar:2.11.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-javac:jar:2.11.1
+[DEBUG] Loading mojo org.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.10.1, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@659e0bfd]
+[DEBUG] Configuring mojo execution 'org.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile:default-compile' with basic configurator -->
+[DEBUG]   (f) basedir = D:\projeto-vaadin
+[DEBUG]   (f) buildDirectory = D:\projeto-vaadin\target
+[DEBUG]   (f) compilePath = [D:\projeto-vaadin\target\classes, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-spring-boot-starter\23.2.9\vaadin-spring-boot-starter-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-spring\23.2.7\vaadin-spring-23.2.7.jar, C:\Users\Administrator\.m2\repository\com\vaadin\flow-server\23.2.7\flow-server-23.2.7.jar, C:\Users\Administrator\.m2\repository\com\vaadin\external\gwt\gwt-elemental\2.8.2.vaadin2\gwt-elemental-2.8.2.vaadin2.jar, C:\Users\Administrator\.m2\repository\commons-fileupload\commons-fileupload\1.4\commons-fileupload-1.4.jar, C:\Users\Administrator\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar, C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.5\jackson-core-2.13.5.jar, C:\Users\Administrator\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar, C:\Users\Administrator\.m2\repository\com\helger\ph-css\6.5.0\ph-css-6.5.0.jar, C:\Users\Administrator\.m2\repository\com\helger\commons\ph-commons\10.1.6\ph-commons-10.1.6.jar, C:\Users\Administrator\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar, C:\Users\Administrator\.m2\repository\com\vaadin\external\gentyref\1.2.0.vaadin1\gentyref-1.2.0.vaadin1.jar, C:\Users\Administrator\.m2\repository\org\apache\commons\commons-compress\1.22\commons-compress-1.22.jar, C:\Users\Administrator\.m2\repository\org\apache\httpcomponents\httpclient\4.5.14\httpclient-4.5.14.jar, C:\Users\Administrator\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar, C:\Users\Administrator\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar, C:\Users\Administrator\.m2\repository\com\vaadin\flow-push\23.2.7\flow-push-23.2.7.jar, C:\Users\Administrator\.m2\repository\com\vaadin\external\atmosphere\atmosphere-runtime\2.7.3.slf4jvaadin4\atmosphere-runtime-2.7.3.slf4jvaadin4.jar, C:\Users\Administrator\.m2\repository\com\vaadin\flow-client\23.2.7\flow-client-23.2.7.jar, C:\Users\Administrator\.m2\repository\org\springframework\spring-websocket\5.3.31\spring-websocket-5.3.31.jar, C:\Users\Administrator\.m2\repository\org\hibernate\validator\hibernate-validator\6.2.5.Final\hibernate-validator-6.2.5.Final.jar, C:\Users\Administrator\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-core\23.2.9\vaadin-core-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-dev-server\23.2.7\vaadin-dev-server-23.2.7.jar, C:\Users\Administrator\.m2\repository\com\vaadin\license-checker\1.11.2\license-checker-1.11.2.jar, C:\Users\Administrator\.m2\repository\com\github\oshi\oshi-core\6.1.6\oshi-core-6.1.6.jar, C:\Users\Administrator\.m2\repository\net\java\dev\jna\jna\5.11.0\jna-5.11.0.jar, C:\Users\Administrator\.m2\repository\net\java\dev\jna\jna-platform\5.11.0\jna-platform-5.11.0.jar, C:\Users\Administrator\.m2\repository\com\nimbusds\nimbus-jose-jwt\9.23\nimbus-jose-jwt-9.23.jar, C:\Users\Administrator\.m2\repository\org\lucee\jcip-annotations\1.0.0\jcip-annotations-1.0.0.jar, C:\Users\Administrator\.m2\repository\com\vaadin\open\8.4.0.3\open-8.4.0.3.jar, C:\Users\Administrator\.m2\repository\com\vaadin\flow-lit-template\23.2.7\flow-lit-template-23.2.7.jar, C:\Users\Administrator\.m2\repository\com\vaadin\flow-polymer-template\23.2.7\flow-polymer-template-23.2.7.jar, C:\Users\Administrator\.m2\repository\com\vaadin\flow-html-components\23.2.7\flow-html-components-23.2.7.jar, C:\Users\Administrator\.m2\repository\com\vaadin\flow-data\23.2.7\flow-data-23.2.7.jar, C:\Users\Administrator\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar, C:\Users\Administrator\.m2\repository\com\vaadin\flow-dnd\23.2.7\flow-dnd-23.2.7.jar, C:\Users\Administrator\.m2\repository\org\webjars\npm\vaadin__vaadin-mobile-drag-drop\1.0.1\vaadin__vaadin-mobile-drag-drop-1.0.1.jar, C:\Users\Administrator\.m2\repository\org\webjars\npm\mobile-drag-drop\2.3.0-rc.2\mobile-drag-drop-2.3.0-rc.2.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-lumo-theme\23.2.9\vaadin-lumo-theme-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-material-theme\23.2.9\vaadin-material-theme-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-accordion-flow\23.2.9\vaadin-accordion-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-avatar-flow\23.2.9\vaadin-avatar-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-flow-components-base\23.2.9\vaadin-flow-components-base-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-button-flow\23.2.9\vaadin-button-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-checkbox-flow\23.2.9\vaadin-checkbox-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-combo-box-flow\23.2.9\vaadin-combo-box-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-confirm-dialog-flow\23.2.9\vaadin-confirm-dialog-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-custom-field-flow\23.2.9\vaadin-custom-field-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-date-picker-flow\23.2.9\vaadin-date-picker-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-date-time-picker-flow\23.2.9\vaadin-date-time-picker-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-details-flow\23.2.9\vaadin-details-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-time-picker-flow\23.2.9\vaadin-time-picker-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-select-flow\23.2.9\vaadin-select-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-dialog-flow\23.2.9\vaadin-dialog-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-form-layout-flow\23.2.9\vaadin-form-layout-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-field-highlighter-flow\23.2.9\vaadin-field-highlighter-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-grid-flow\23.2.9\vaadin-grid-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-icons-flow\23.2.9\vaadin-icons-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-iron-list-flow\23.2.9\vaadin-iron-list-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-virtual-list-flow\23.2.9\vaadin-virtual-list-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-list-box-flow\23.2.9\vaadin-list-box-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-login-flow\23.2.9\vaadin-login-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-messages-flow\23.2.9\vaadin-messages-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-ordered-layout-flow\23.2.9\vaadin-ordered-layout-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-progress-bar-flow\23.2.9\vaadin-progress-bar-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-radio-button-flow\23.2.9\vaadin-radio-button-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-renderer-flow\23.2.9\vaadin-renderer-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-split-layout-flow\23.2.9\vaadin-split-layout-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-tabs-flow\23.2.9\vaadin-tabs-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-text-field-flow\23.2.9\vaadin-text-field-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-upload-flow\23.2.9\vaadin-upload-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-notification-flow\23.2.9\vaadin-notification-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-app-layout-flow\23.2.9\vaadin-app-layout-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-context-menu-flow\23.2.9\vaadin-context-menu-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-menu-bar-flow\23.2.9\vaadin-menu-bar-flow-23.2.9.jar, C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.7.18\spring-boot-starter-web-2.7.18.jar, C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter\2.7.18\spring-boot-starter-2.7.18.jar, C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.7.18\spring-boot-starter-logging-2.7.18.jar, C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.17.2\log4j-to-slf4j-2.17.2.jar, C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar, C:\Users\Administrator\.m2\repository\org\slf4j\jul-to-slf4j\1.7.36\jul-to-slf4j-1.7.36.jar, C:\Users\Administrator\.m2\repository\org\yaml\snakeyaml\1.30\snakeyaml-1.30.jar, C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.7.18\spring-boot-starter-json-2.7.18.jar, C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.5\jackson-databind-2.13.5.jar, C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.5\jackson-annotations-2.13.5.jar, C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.13.5\jackson-datatype-jdk8-2.13.5.jar, C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.13.5\jackson-datatype-jsr310-2.13.5.jar, C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.13.5\jackson-module-parameter-names-2.13.5.jar, C:\Users\Administrator\.m2\repository\org\springframework\spring-web\5.3.31\spring-web-5.3.31.jar, C:\Users\Administrator\.m2\repository\org\springframework\spring-webmvc\5.3.31\spring-webmvc-5.3.31.jar, C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.7.18\spring-boot-starter-data-jpa-2.7.18.jar, C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.7.18\spring-boot-starter-aop-2.7.18.jar, C:\Users\Administrator\.m2\repository\org\aspectj\aspectjweaver\1.9.7\aspectjweaver-1.9.7.jar, C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.7.18\spring-boot-starter-jdbc-2.7.18.jar, C:\Users\Administrator\.m2\repository\org\springframework\spring-jdbc\5.3.31\spring-jdbc-5.3.31.jar, C:\Users\Administrator\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar, C:\Users\Administrator\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar, C:\Users\Administrator\.m2\repository\org\hibernate\hibernate-core\5.6.15.Final\hibernate-core-5.6.15.Final.jar, C:\Users\Administrator\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar, C:\Users\Administrator\.m2\repository\net\bytebuddy\byte-buddy\1.12.23\byte-buddy-1.12.23.jar, C:\Users\Administrator\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar, C:\Users\Administrator\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar, C:\Users\Administrator\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar, C:\Users\Administrator\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar, C:\Users\Administrator\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.9\jaxb-runtime-2.3.9.jar, C:\Users\Administrator\.m2\repository\org\glassfish\jaxb\txw2\2.3.9\txw2-2.3.9.jar, C:\Users\Administrator\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.12\istack-commons-runtime-3.0.12.jar, C:\Users\Administrator\.m2\repository\org\springframework\data\spring-data-jpa\2.7.18\spring-data-jpa-2.7.18.jar, C:\Users\Administrator\.m2\repository\org\springframework\data\spring-data-commons\2.7.18\spring-data-commons-2.7.18.jar, C:\Users\Administrator\.m2\repository\org\springframework\spring-orm\5.3.31\spring-orm-5.3.31.jar, C:\Users\Administrator\.m2\repository\org\springframework\spring-aspects\5.3.31\spring-aspects-5.3.31.jar, C:\Users\Administrator\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar, C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-security\2.7.18\spring-boot-starter-security-2.7.18.jar, C:\Users\Administrator\.m2\repository\org\springframework\spring-aop\5.3.31\spring-aop-5.3.31.jar, C:\Users\Administrator\.m2\repository\org\springframework\security\spring-security-config\5.7.11\spring-security-config-5.7.11.jar, C:\Users\Administrator\.m2\repository\org\springframework\security\spring-security-core\5.7.11\spring-security-core-5.7.11.jar, C:\Users\Administrator\.m2\repository\org\springframework\security\spring-security-crypto\5.7.11\spring-security-crypto-5.7.11.jar, C:\Users\Administrator\.m2\repository\org\springframework\security\spring-security-web\5.7.11\spring-security-web-5.7.11.jar, C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.7.18\spring-boot-starter-tomcat-2.7.18.jar, C:\Users\Administrator\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar, C:\Users\Administrator\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.83\tomcat-embed-core-9.0.83.jar, C:\Users\Administrator\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.83\tomcat-embed-el-9.0.83.jar, C:\Users\Administrator\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.83\tomcat-embed-websocket-9.0.83.jar, C:\Users\Administrator\.m2\repository\com\sybase\sajdbc4\17.0\sajdbc4-17.0.jar, C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-devtools\2.7.18\spring-boot-devtools-2.7.18.jar, C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot\2.7.18\spring-boot-2.7.18.jar, C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.7.18\spring-boot-autoconfigure-2.7.18.jar, C:\Users\Administrator\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar, C:\Users\Administrator\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar, C:\Users\Administrator\.m2\repository\org\springframework\spring-core\5.3.31\spring-core-5.3.31.jar, C:\Users\Administrator\.m2\repository\org\springframework\spring-jcl\5.3.31\spring-jcl-5.3.31.jar, C:\Users\Administrator\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar, C:\Users\Administrator\.m2\repository\ch\qos\logback\logback-classic\1.2.12\logback-classic-1.2.12.jar, C:\Users\Administrator\.m2\repository\ch\qos\logback\logback-core\1.2.12\logback-core-1.2.12.jar, C:\Users\Administrator\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.36\jcl-over-slf4j-1.7.36.jar, C:\Users\Administrator\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar, C:\Users\Administrator\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar, C:\Users\Administrator\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar, C:\Users\Administrator\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar, C:\Users\Administrator\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar, C:\Users\Administrator\.m2\repository\org\springframework\spring-tx\5.3.31\spring-tx-5.3.31.jar, C:\Users\Administrator\.m2\repository\org\springframework\spring-beans\5.3.31\spring-beans-5.3.31.jar, C:\Users\Administrator\.m2\repository\org\springframework\spring-context\5.3.31\spring-context-5.3.31.jar, C:\Users\Administrator\.m2\repository\org\springframework\spring-expression\5.3.31\spring-expression-5.3.31.jar, C:\Users\Administrator\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar]
+[DEBUG]   (f) compileSourceRoots = [D:\projeto-vaadin\src\main\java]
+[DEBUG]   (f) compilerArgs = [-parameters, -Xlint:unchecked, -Xlint:deprecation]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) createMissingPackageInfoClass = true
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) debugFileName = javac
+[DEBUG]   (f) enablePreview = false
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) failOnWarning = false
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedSourcesDirectory = D:\projeto-vaadin\target\generated-sources\annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile {execution: default-compile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = D:\projeto-vaadin\target\classes
+[DEBUG]   (f) parameters = false
+[DEBUG]   (f) project = MavenProject: com.exemplo:projeto-vaadin:1.0-SNAPSHOT @ D:\projeto-vaadin\pom.xml
+[DEBUG]   (f) projectArtifact = com.exemplo:projeto-vaadin:jar:1.0-SNAPSHOT
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@6e6d4780
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = true
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 17
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (s) target = 17
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Adding D:\projeto-vaadin\target\generated-sources\annotations to compile source roots:
+  D:\projeto-vaadin\src\main\java
+[DEBUG] New compile source roots:
+  D:\projeto-vaadin\src\main\java
+  D:\projeto-vaadin\target\generated-sources\annotations
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\GenericComboBoxFactory.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\VaadinSessionErrorHandler.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\SortConfigId.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\Erro404View.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\MarcaView.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\DynamicDataSourceSwitcher.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\FiltroUsuario.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\AppContext.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\FornecedorRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\FornecedorService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\RelatorioView.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ProdutoService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ColumnConfigEntity.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ColumnConfigCadastroRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\Produto.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\GridAggregationUtil.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ProdutoRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\UsuarioAcessoService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\MarcaCadastro.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\UsuarioAcessoRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\MainLayout.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\MainView.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\SortConfig.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ClienteView.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ColumnConfigFactory.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\EmpresaRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\SessionExpirationListener.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\FornecedorView.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\OrdemColuna.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\GenericaCadastro.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\SQLAnywhere10Dialect.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ParametroRelatorioService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\WebConfig.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ColumnConfigCadastroFactory.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\FallbackView.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\GridColumnConfigCadastroRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\Cliente.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ColumnConfigPrincipalRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\GridColumnConfig.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\Marca.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\MarcaService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ProdutoCadastro.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\Application.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\LazyRepositoryInitializationConfig.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\SortConfigRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\Fornecedor.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ColumnConfigCadastroEntity.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\StringToLocalDateTimeConverter.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\CustomPersistenceUnitInfo.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ClienteCadastro.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ClienteService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\EmpresaConnectionManager.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\StringToIntegerConverter.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\RelatorioService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\RelatorioDinamicoResult.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ClienteRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\VisibilidadeColuna.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\FiltroUsuarioService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\Empresa.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\MarcaRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\StringToFloatConverter.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\AbstractGridView.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\SecurityConfig.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\SybaseConnectionTest.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\VisibilidadeColunaId.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ParametroDialogBuilder.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\TestConnection.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\SQLAnywhereIdentityColumnSupport.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ClienteId.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\DataSourceHelper.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\CustomUserDetails.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\VisibilidadeColunaService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\GridColumnConfigService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\GridColumnConfigCadastro.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\VisibilidadeColunaRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\SimpleI18NProvider.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\StringToShortConverter.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\CustomErrorHandler.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\AppShell.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\GridColumnsConfig.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\GridColumnConfigCadastroService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\GridColumnConfigRelatorioService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\GenericRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\OrdemColunaRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ColumnConfigRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\EmpresaAwareService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\GridFilterUtil.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\LoggingFilter.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\FiltroUsuarioRepository.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\LoginView.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ProdutoView.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\UsuarioLogado.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\SpringContext.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\UsuarioAcesso.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ParametroRelatorio.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\ColumnAliasService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\PrimaryDataSourceConfig.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\StringToDateConverter.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\DynamicDataSourceConfig.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\VaadinDataSourceInitListener.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\FornecedorCadastro.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\CustomUserDetailsService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\DataSourceInterceptor.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\OrdemColunaService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\SortConfigService.java
+[DEBUG] Stale source detected: D:\projeto-vaadin\src\main\java\com\exemplo\SystemParameterService.java
+[INFO] Changes detected - recompiling the module!
+[DEBUG] Classpath:
+[DEBUG]  D:\projeto-vaadin\target\classes
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-spring-boot-starter\23.2.9\vaadin-spring-boot-starter-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-spring\23.2.7\vaadin-spring-23.2.7.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\flow-server\23.2.7\flow-server-23.2.7.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\external\gwt\gwt-elemental\2.8.2.vaadin2\gwt-elemental-2.8.2.vaadin2.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\commons-fileupload\commons-fileupload\1.4\commons-fileupload-1.4.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.5\jackson-core-2.13.5.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\helger\ph-css\6.5.0\ph-css-6.5.0.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\helger\commons\ph-commons\10.1.6\ph-commons-10.1.6.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\external\gentyref\1.2.0.vaadin1\gentyref-1.2.0.vaadin1.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\apache\commons\commons-compress\1.22\commons-compress-1.22.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\apache\httpcomponents\httpclient\4.5.14\httpclient-4.5.14.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\flow-push\23.2.7\flow-push-23.2.7.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\external\atmosphere\atmosphere-runtime\2.7.3.slf4jvaadin4\atmosphere-runtime-2.7.3.slf4jvaadin4.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\flow-client\23.2.7\flow-client-23.2.7.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\spring-websocket\5.3.31\spring-websocket-5.3.31.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\hibernate\validator\hibernate-validator\6.2.5.Final\hibernate-validator-6.2.5.Final.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-core\23.2.9\vaadin-core-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-dev-server\23.2.7\vaadin-dev-server-23.2.7.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\license-checker\1.11.2\license-checker-1.11.2.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\github\oshi\oshi-core\6.1.6\oshi-core-6.1.6.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\net\java\dev\jna\jna\5.11.0\jna-5.11.0.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\net\java\dev\jna\jna-platform\5.11.0\jna-platform-5.11.0.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\nimbusds\nimbus-jose-jwt\9.23\nimbus-jose-jwt-9.23.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\lucee\jcip-annotations\1.0.0\jcip-annotations-1.0.0.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\open\8.4.0.3\open-8.4.0.3.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\flow-lit-template\23.2.7\flow-lit-template-23.2.7.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\flow-polymer-template\23.2.7\flow-polymer-template-23.2.7.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\flow-html-components\23.2.7\flow-html-components-23.2.7.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\flow-data\23.2.7\flow-data-23.2.7.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\flow-dnd\23.2.7\flow-dnd-23.2.7.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\webjars\npm\vaadin__vaadin-mobile-drag-drop\1.0.1\vaadin__vaadin-mobile-drag-drop-1.0.1.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\webjars\npm\mobile-drag-drop\2.3.0-rc.2\mobile-drag-drop-2.3.0-rc.2.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-lumo-theme\23.2.9\vaadin-lumo-theme-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-material-theme\23.2.9\vaadin-material-theme-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-accordion-flow\23.2.9\vaadin-accordion-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-avatar-flow\23.2.9\vaadin-avatar-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-flow-components-base\23.2.9\vaadin-flow-components-base-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-button-flow\23.2.9\vaadin-button-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-checkbox-flow\23.2.9\vaadin-checkbox-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-combo-box-flow\23.2.9\vaadin-combo-box-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-confirm-dialog-flow\23.2.9\vaadin-confirm-dialog-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-custom-field-flow\23.2.9\vaadin-custom-field-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-date-picker-flow\23.2.9\vaadin-date-picker-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-date-time-picker-flow\23.2.9\vaadin-date-time-picker-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-details-flow\23.2.9\vaadin-details-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-time-picker-flow\23.2.9\vaadin-time-picker-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-select-flow\23.2.9\vaadin-select-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-dialog-flow\23.2.9\vaadin-dialog-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-form-layout-flow\23.2.9\vaadin-form-layout-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-field-highlighter-flow\23.2.9\vaadin-field-highlighter-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-grid-flow\23.2.9\vaadin-grid-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-icons-flow\23.2.9\vaadin-icons-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-iron-list-flow\23.2.9\vaadin-iron-list-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-virtual-list-flow\23.2.9\vaadin-virtual-list-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-list-box-flow\23.2.9\vaadin-list-box-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-login-flow\23.2.9\vaadin-login-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-messages-flow\23.2.9\vaadin-messages-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-ordered-layout-flow\23.2.9\vaadin-ordered-layout-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-progress-bar-flow\23.2.9\vaadin-progress-bar-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-radio-button-flow\23.2.9\vaadin-radio-button-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-renderer-flow\23.2.9\vaadin-renderer-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-split-layout-flow\23.2.9\vaadin-split-layout-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-tabs-flow\23.2.9\vaadin-tabs-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-text-field-flow\23.2.9\vaadin-text-field-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-upload-flow\23.2.9\vaadin-upload-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-notification-flow\23.2.9\vaadin-notification-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-app-layout-flow\23.2.9\vaadin-app-layout-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-context-menu-flow\23.2.9\vaadin-context-menu-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-menu-bar-flow\23.2.9\vaadin-menu-bar-flow-23.2.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.7.18\spring-boot-starter-web-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter\2.7.18\spring-boot-starter-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.7.18\spring-boot-starter-logging-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.17.2\log4j-to-slf4j-2.17.2.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\slf4j\jul-to-slf4j\1.7.36\jul-to-slf4j-1.7.36.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\yaml\snakeyaml\1.30\snakeyaml-1.30.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.7.18\spring-boot-starter-json-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.5\jackson-databind-2.13.5.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.5\jackson-annotations-2.13.5.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.13.5\jackson-datatype-jdk8-2.13.5.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.13.5\jackson-datatype-jsr310-2.13.5.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.13.5\jackson-module-parameter-names-2.13.5.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\spring-web\5.3.31\spring-web-5.3.31.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\spring-webmvc\5.3.31\spring-webmvc-5.3.31.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.7.18\spring-boot-starter-data-jpa-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.7.18\spring-boot-starter-aop-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\aspectj\aspectjweaver\1.9.7\aspectjweaver-1.9.7.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.7.18\spring-boot-starter-jdbc-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\spring-jdbc\5.3.31\spring-jdbc-5.3.31.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\hibernate\hibernate-core\5.6.15.Final\hibernate-core-5.6.15.Final.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\net\bytebuddy\byte-buddy\1.12.23\byte-buddy-1.12.23.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.9\jaxb-runtime-2.3.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\glassfish\jaxb\txw2\2.3.9\txw2-2.3.9.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.12\istack-commons-runtime-3.0.12.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\data\spring-data-jpa\2.7.18\spring-data-jpa-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\data\spring-data-commons\2.7.18\spring-data-commons-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\spring-orm\5.3.31\spring-orm-5.3.31.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\spring-aspects\5.3.31\spring-aspects-5.3.31.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-security\2.7.18\spring-boot-starter-security-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\spring-aop\5.3.31\spring-aop-5.3.31.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\security\spring-security-config\5.7.11\spring-security-config-5.7.11.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\security\spring-security-core\5.7.11\spring-security-core-5.7.11.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\security\spring-security-crypto\5.7.11\spring-security-crypto-5.7.11.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\security\spring-security-web\5.7.11\spring-security-web-5.7.11.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.7.18\spring-boot-starter-tomcat-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.83\tomcat-embed-core-9.0.83.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.83\tomcat-embed-el-9.0.83.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.83\tomcat-embed-websocket-9.0.83.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\sybase\sajdbc4\17.0\sajdbc4-17.0.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-devtools\2.7.18\spring-boot-devtools-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot\2.7.18\spring-boot-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.7.18\spring-boot-autoconfigure-2.7.18.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\spring-core\5.3.31\spring-core-5.3.31.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\spring-jcl\5.3.31\spring-jcl-5.3.31.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\ch\qos\logback\logback-classic\1.2.12\logback-classic-1.2.12.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\ch\qos\logback\logback-core\1.2.12\logback-core-1.2.12.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.36\jcl-over-slf4j-1.7.36.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\spring-tx\5.3.31\spring-tx-5.3.31.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\spring-beans\5.3.31\spring-beans-5.3.31.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\spring-context\5.3.31\spring-context-5.3.31.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\org\springframework\spring-expression\5.3.31\spring-expression-5.3.31.jar
+[DEBUG]  C:\Users\Administrator\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar
+[DEBUG] Source roots:
+[DEBUG]  D:\projeto-vaadin\src\main\java
+[DEBUG]  D:\projeto-vaadin\target\generated-sources\annotations
+[DEBUG] Command line options:
+[DEBUG] -d D:\projeto-vaadin\target\classes -classpath D:\projeto-vaadin\target\classes;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-spring-boot-starter\23.2.9\vaadin-spring-boot-starter-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-spring\23.2.7\vaadin-spring-23.2.7.jar;C:\Users\Administrator\.m2\repository\com\vaadin\flow-server\23.2.7\flow-server-23.2.7.jar;C:\Users\Administrator\.m2\repository\com\vaadin\external\gwt\gwt-elemental\2.8.2.vaadin2\gwt-elemental-2.8.2.vaadin2.jar;C:\Users\Administrator\.m2\repository\commons-fileupload\commons-fileupload\1.4\commons-fileupload-1.4.jar;C:\Users\Administrator\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.5\jackson-core-2.13.5.jar;C:\Users\Administrator\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar;C:\Users\Administrator\.m2\repository\com\helger\ph-css\6.5.0\ph-css-6.5.0.jar;C:\Users\Administrator\.m2\repository\com\helger\commons\ph-commons\10.1.6\ph-commons-10.1.6.jar;C:\Users\Administrator\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Administrator\.m2\repository\com\vaadin\external\gentyref\1.2.0.vaadin1\gentyref-1.2.0.vaadin1.jar;C:\Users\Administrator\.m2\repository\org\apache\commons\commons-compress\1.22\commons-compress-1.22.jar;C:\Users\Administrator\.m2\repository\org\apache\httpcomponents\httpclient\4.5.14\httpclient-4.5.14.jar;C:\Users\Administrator\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\Administrator\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\Administrator\.m2\repository\com\vaadin\flow-push\23.2.7\flow-push-23.2.7.jar;C:\Users\Administrator\.m2\repository\com\vaadin\external\atmosphere\atmosphere-runtime\2.7.3.slf4jvaadin4\atmosphere-runtime-2.7.3.slf4jvaadin4.jar;C:\Users\Administrator\.m2\repository\com\vaadin\flow-client\23.2.7\flow-client-23.2.7.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-websocket\5.3.31\spring-websocket-5.3.31.jar;C:\Users\Administrator\.m2\repository\org\hibernate\validator\hibernate-validator\6.2.5.Final\hibernate-validator-6.2.5.Final.jar;C:\Users\Administrator\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-core\23.2.9\vaadin-core-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-dev-server\23.2.7\vaadin-dev-server-23.2.7.jar;C:\Users\Administrator\.m2\repository\com\vaadin\license-checker\1.11.2\license-checker-1.11.2.jar;C:\Users\Administrator\.m2\repository\com\github\oshi\oshi-core\6.1.6\oshi-core-6.1.6.jar;C:\Users\Administrator\.m2\repository\net\java\dev\jna\jna\5.11.0\jna-5.11.0.jar;C:\Users\Administrator\.m2\repository\net\java\dev\jna\jna-platform\5.11.0\jna-platform-5.11.0.jar;C:\Users\Administrator\.m2\repository\com\nimbusds\nimbus-jose-jwt\9.23\nimbus-jose-jwt-9.23.jar;C:\Users\Administrator\.m2\repository\org\lucee\jcip-annotations\1.0.0\jcip-annotations-1.0.0.jar;C:\Users\Administrator\.m2\repository\com\vaadin\open\8.4.0.3\open-8.4.0.3.jar;C:\Users\Administrator\.m2\repository\com\vaadin\flow-lit-template\23.2.7\flow-lit-template-23.2.7.jar;C:\Users\Administrator\.m2\repository\com\vaadin\flow-polymer-template\23.2.7\flow-polymer-template-23.2.7.jar;C:\Users\Administrator\.m2\repository\com\vaadin\flow-html-components\23.2.7\flow-html-components-23.2.7.jar;C:\Users\Administrator\.m2\repository\com\vaadin\flow-data\23.2.7\flow-data-23.2.7.jar;C:\Users\Administrator\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;C:\Users\Administrator\.m2\repository\com\vaadin\flow-dnd\23.2.7\flow-dnd-23.2.7.jar;C:\Users\Administrator\.m2\repository\org\webjars\npm\vaadin__vaadin-mobile-drag-drop\1.0.1\vaadin__vaadin-mobile-drag-drop-1.0.1.jar;C:\Users\Administrator\.m2\repository\org\webjars\npm\mobile-drag-drop\2.3.0-rc.2\mobile-drag-drop-2.3.0-rc.2.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-lumo-theme\23.2.9\vaadin-lumo-theme-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-material-theme\23.2.9\vaadin-material-theme-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-accordion-flow\23.2.9\vaadin-accordion-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-avatar-flow\23.2.9\vaadin-avatar-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-flow-components-base\23.2.9\vaadin-flow-components-base-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-button-flow\23.2.9\vaadin-button-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-checkbox-flow\23.2.9\vaadin-checkbox-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-combo-box-flow\23.2.9\vaadin-combo-box-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-confirm-dialog-flow\23.2.9\vaadin-confirm-dialog-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-custom-field-flow\23.2.9\vaadin-custom-field-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-date-picker-flow\23.2.9\vaadin-date-picker-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-date-time-picker-flow\23.2.9\vaadin-date-time-picker-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-details-flow\23.2.9\vaadin-details-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-time-picker-flow\23.2.9\vaadin-time-picker-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-select-flow\23.2.9\vaadin-select-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-dialog-flow\23.2.9\vaadin-dialog-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-form-layout-flow\23.2.9\vaadin-form-layout-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-field-highlighter-flow\23.2.9\vaadin-field-highlighter-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-grid-flow\23.2.9\vaadin-grid-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-icons-flow\23.2.9\vaadin-icons-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-iron-list-flow\23.2.9\vaadin-iron-list-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-virtual-list-flow\23.2.9\vaadin-virtual-list-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-list-box-flow\23.2.9\vaadin-list-box-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-login-flow\23.2.9\vaadin-login-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-messages-flow\23.2.9\vaadin-messages-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-ordered-layout-flow\23.2.9\vaadin-ordered-layout-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-progress-bar-flow\23.2.9\vaadin-progress-bar-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-radio-button-flow\23.2.9\vaadin-radio-button-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-renderer-flow\23.2.9\vaadin-renderer-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-split-layout-flow\23.2.9\vaadin-split-layout-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-tabs-flow\23.2.9\vaadin-tabs-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-text-field-flow\23.2.9\vaadin-text-field-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-upload-flow\23.2.9\vaadin-upload-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-notification-flow\23.2.9\vaadin-notification-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-app-layout-flow\23.2.9\vaadin-app-layout-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-context-menu-flow\23.2.9\vaadin-context-menu-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\com\vaadin\vaadin-menu-bar-flow\23.2.9\vaadin-menu-bar-flow-23.2.9.jar;C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.7.18\spring-boot-starter-web-2.7.18.jar;C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter\2.7.18\spring-boot-starter-2.7.18.jar;C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.7.18\spring-boot-starter-logging-2.7.18.jar;C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.17.2\log4j-to-slf4j-2.17.2.jar;C:\Users\Administrator\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;C:\Users\Administrator\.m2\repository\org\slf4j\jul-to-slf4j\1.7.36\jul-to-slf4j-1.7.36.jar;C:\Users\Administrator\.m2\repository\org\yaml\snakeyaml\1.30\snakeyaml-1.30.jar;C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.7.18\spring-boot-starter-json-2.7.18.jar;C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.5\jackson-databind-2.13.5.jar;C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.5\jackson-annotations-2.13.5.jar;C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.13.5\jackson-datatype-jdk8-2.13.5.jar;C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.13.5\jackson-datatype-jsr310-2.13.5.jar;C:\Users\Administrator\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.13.5\jackson-module-parameter-names-2.13.5.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-web\5.3.31\spring-web-5.3.31.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-webmvc\5.3.31\spring-webmvc-5.3.31.jar;C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.7.18\spring-boot-starter-data-jpa-2.7.18.jar;C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.7.18\spring-boot-starter-aop-2.7.18.jar;C:\Users\Administrator\.m2\repository\org\aspectj\aspectjweaver\1.9.7\aspectjweaver-1.9.7.jar;C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.7.18\spring-boot-starter-jdbc-2.7.18.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-jdbc\5.3.31\spring-jdbc-5.3.31.jar;C:\Users\Administrator\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\Administrator\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\Administrator\.m2\repository\org\hibernate\hibernate-core\5.6.15.Final\hibernate-core-5.6.15.Final.jar;C:\Users\Administrator\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar;C:\Users\Administrator\.m2\repository\net\bytebuddy\byte-buddy\1.12.23\byte-buddy-1.12.23.jar;C:\Users\Administrator\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Administrator\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar;C:\Users\Administrator\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\Administrator\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\Administrator\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.9\jaxb-runtime-2.3.9.jar;C:\Users\Administrator\.m2\repository\org\glassfish\jaxb\txw2\2.3.9\txw2-2.3.9.jar;C:\Users\Administrator\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.12\istack-commons-runtime-3.0.12.jar;C:\Users\Administrator\.m2\repository\org\springframework\data\spring-data-jpa\2.7.18\spring-data-jpa-2.7.18.jar;C:\Users\Administrator\.m2\repository\org\springframework\data\spring-data-commons\2.7.18\spring-data-commons-2.7.18.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-orm\5.3.31\spring-orm-5.3.31.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-aspects\5.3.31\spring-aspects-5.3.31.jar;C:\Users\Administrator\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-security\2.7.18\spring-boot-starter-security-2.7.18.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-aop\5.3.31\spring-aop-5.3.31.jar;C:\Users\Administrator\.m2\repository\org\springframework\security\spring-security-config\5.7.11\spring-security-config-5.7.11.jar;C:\Users\Administrator\.m2\repository\org\springframework\security\spring-security-core\5.7.11\spring-security-core-5.7.11.jar;C:\Users\Administrator\.m2\repository\org\springframework\security\spring-security-crypto\5.7.11\spring-security-crypto-5.7.11.jar;C:\Users\Administrator\.m2\repository\org\springframework\security\spring-security-web\5.7.11\spring-security-web-5.7.11.jar;C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.7.18\spring-boot-starter-tomcat-2.7.18.jar;C:\Users\Administrator\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\Administrator\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.83\tomcat-embed-core-9.0.83.jar;C:\Users\Administrator\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.83\tomcat-embed-el-9.0.83.jar;C:\Users\Administrator\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.83\tomcat-embed-websocket-9.0.83.jar;C:\Users\Administrator\.m2\repository\com\sybase\sajdbc4\17.0\sajdbc4-17.0.jar;C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-devtools\2.7.18\spring-boot-devtools-2.7.18.jar;C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot\2.7.18\spring-boot-2.7.18.jar;C:\Users\Administrator\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.7.18\spring-boot-autoconfigure-2.7.18.jar;C:\Users\Administrator\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\Administrator\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-core\5.3.31\spring-core-5.3.31.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-jcl\5.3.31\spring-jcl-5.3.31.jar;C:\Users\Administrator\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Administrator\.m2\repository\ch\qos\logback\logback-classic\1.2.12\logback-classic-1.2.12.jar;C:\Users\Administrator\.m2\repository\ch\qos\logback\logback-core\1.2.12\logback-core-1.2.12.jar;C:\Users\Administrator\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.36\jcl-over-slf4j-1.7.36.jar;C:\Users\Administrator\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Administrator\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\Administrator\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\Administrator\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar;C:\Users\Administrator\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-tx\5.3.31\spring-tx-5.3.31.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-beans\5.3.31\spring-beans-5.3.31.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-context\5.3.31\spring-context-5.3.31.jar;C:\Users\Administrator\.m2\repository\org\springframework\spring-expression\5.3.31\spring-expression-5.3.31.jar;C:\Users\Administrator\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar; -sourcepath D:\projeto-vaadin\src\main\java;D:\projeto-vaadin\target\generated-sources\annotations; -s D:\projeto-vaadin\target\generated-sources\annotations -g -target 17 -source 17 -encoding UTF-8 -parameters -Xlint:unchecked -Xlint:deprecation
+[DEBUG] incrementalBuildHelper#beforeRebuildExecution
+[INFO] Compiling 106 source files to D:\projeto-vaadin\target\classes
+[DEBUG] incrementalBuildHelper#afterRebuildExecution
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] /D:/projeto-vaadin/src/main/java/com/exemplo/AbstractGridView.java:[96,52] unchecked cast
+  required: java.lang.Class<T>
+  found:    java.lang.Class<capture#1 of ?>
+[WARNING] /D:/projeto-vaadin/src/main/java/com/exemplo/RelatorioService.java:[67,25] query(java.lang.String,java.lang.Object[],org.springframework.jdbc.core.RowCallbackHandler) in org.springframework.jdbc.core.JdbcTemplate has been deprecated
+[WARNING] /D:/projeto-vaadin/src/main/java/com/exemplo/ParametroRelatorioService.java:[33,56] unchecked conversion
+  required: java.util.List<java.lang.Object[]>
+  found:    java.util.List
+[WARNING] /D:/projeto-vaadin/src/main/java/com/exemplo/ParametroRelatorioService.java:[64,28] <T>query(java.lang.String,java.lang.Object[],org.springframework.jdbc.core.RowMapper<T>) in org.springframework.jdbc.core.JdbcTemplate has been deprecated
+[INFO] 4 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /D:/projeto-vaadin/src/main/java/com/exemplo/DynamicDataSourceConfig.java:[66,72] incompatible types: java.lang.Integer cannot be converted to java.lang.Throwable
+[ERROR] /D:/projeto-vaadin/src/main/java/com/exemplo/DynamicDataSourceConfig.java:[76,89] incompatible types: java.lang.Integer cannot be converted to java.lang.Throwable
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26.528 s
+[INFO] Finished at: 2025-05-18T11:04:13-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile (default-compile) on project projeto-vaadin: Compilation failure: Compilation failure: 
+[ERROR] /D:/projeto-vaadin/src/main/java/com/exemplo/DynamicDataSourceConfig.java:[66,72] incompatible types: java.lang.Integer cannot be converted to java.lang.Throwable
+[ERROR] /D:/projeto-vaadin/src/main/java/com/exemplo/DynamicDataSourceConfig.java:[76,89] incompatible types: java.lang.Integer cannot be converted to java.lang.Throwable
+[ERROR] -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile (default-compile) on project projeto-vaadin: Compilation failure
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:333)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:568)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.plugin.compiler.CompilationFailureException: Compilation failure
+    at org.apache.maven.plugin.compiler.AbstractCompilerMojo.execute (AbstractCompilerMojo.java:1310)
+    at org.apache.maven.plugin.compiler.CompilerMojo.execute (CompilerMojo.java:198)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:568)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+[ERROR] 
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[DEBUG] Shutting down adapter factory; available factories [file-lock, rwlock-local, semaphore-local, noop]; available name mappers [discriminating, file-gav, file-hgav, file-static, gav, static]
+[DEBUG] Shutting down 'file-lock' factory
+[DEBUG] Shutting down 'rwlock-local' factory
+[DEBUG] Shutting down 'semaphore-local' factory
+[DEBUG] Shutting down 'noop' factory

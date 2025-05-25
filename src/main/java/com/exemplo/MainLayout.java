@@ -3,182 +3,260 @@ package com.exemplo;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.H1;
-import com.vaadin.flow.component.icon.Icon;
-import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.component.tabs.Tab;
-import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
-import com.vaadin.flow.router.Route;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.vaadin.flow.component.dialog.Dialog;
+import com.vaadin.flow.component.html.Span;
+import com.vaadin.flow.router.RouterLayout;
+import com.vaadin.flow.server.VaadinSession;
+import com.vaadin.flow.server.VaadinService;
+import com.vaadin.flow.server.RouteRegistry;
+import com.vaadin.flow.component.dependency.CssImport;
+import com.vaadin.flow.router.BeforeEnterEvent;
+import com.vaadin.flow.router.BeforeEnterObserver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 
-/**
- * MainLayout é o layout principal da aplicação, utilizando o componente AppLayout do Vaadin.
- * O AppLayout fornece um menu lateral (drawer) à esquerda e uma área principal de conteúdo à direita.
- *
- * Regras importantes para manutenção e evolução:
- * 1. **Uso do Menu do Vaadin (AppLayout)**:
- *    - O AppLayout é usado para criar o layout com um drawer (menu lateral) e uma área principal.
- *    - O drawer contém apenas as abas de navegação (menuTabs).
- *    - O conteúdo das views (ClienteView, DREView, VendasView, ListagemPedidoView) é exibido na área principal (contentArea).
- *
- * 2. **Navegação Manual**:
- *    - A navegação é gerenciada manualmente por este MainLayout.
- *    - Não usamos rotas do Vaadin (@Route) para navegar entre as views.
- *    - O conteúdo é atualizado no contentArea com base na aba selecionada (menuTabs.addSelectedChangeListener).
- *
- * 3. **Restrições sobre @Route**:
- *    - As views (ClienteView, DREView, VendasView, ListagemPedidoView, etc.) NÃO DEVEM ter anotações @Route.
- *    - Se uma view tiver @Route, o Vaadin tentará navegar automaticamente para ela, exibindo o conteúdo dentro do drawer, o que quebrará o layout.
- *
- * 4. **Adição de Novas Abas**:
- *    - Para adicionar uma nova aba, crie uma nova Tab (ex.: Tab novaTab = new Tab("Nova Aba");).
- *    - Adicione a nova aba ao menuTabs (ex.: menuTabs = new Tabs(clientesTab, dreTab, vendasTab, pedidosTab, novaTab);).
- *    - Atualize o listener (menuTabs.addSelectedChangeListener) para lidar com a nova aba:
- *      if (selectedTab == novaTab) {
- *          contentArea.add(new NovaView(servicoCorrespondente));
- *      }
- *
- * 5. **Adição de Novas Opções no MainMenuModal**:
- *    - Adicione um novo botão no MainMenuModal (ex.: Button novaOpcaoButton = new Button("Nova Opção", event -> { mainLayout.selectTab("nova-opcao"); close(); });).
- *    - Atualize o método selectTab para reconhecer a nova opção:
- *      case "nova-opcao":
- *          menuTabs.setSelectedTab(novaTab);
- *          break;
- *
- * 6. **Manutenção do contentArea**:
- *    - O contentArea é a área principal onde o conteúdo é exibido.
- *    - Qualquer nova view deve ser adicionada ao contentArea usando contentArea.add().
- *    - Não adicione conteúdo diretamente ao drawer, pois isso quebrará o layout.
- */
-// O arquivo styles.css está localizado em frontend/styles/styles.css
-// Ele contém as estilizações para o layout, drawer, e componentes da aplicação
 @CssImport("./styles/styles.css")
-@Route("")
-public class MainLayout extends AppLayout {
+public class MainLayout extends AppLayout implements RouterLayout, BeforeEnterObserver {
 
-    private VerticalLayout contentArea; // Área para exibir o conteúdo na área principal
-    private final ClienteService clienteService;
-    private final DREService dreService;
-    private final VendasService vendasService;
-    private final ListagemPedidoService listagemPedidoService;
-    private Tabs menuTabs; // Tornar menuTabs acessível para o MainMenuModal
+    private static final Logger logger = LoggerFactory.getLogger(MainLayout.class);
+
+    private Tabs menuTabs;
     private Tab clientesTab;
     private Tab dreTab;
-    private Tab vendasTab;
+    private Tab relVendasTab;
     private Tab pedidosTab;
+    private Tab ordensServicoTab;
+    private Tab marcasTab;
+    private Tab fornecedoresTab;
+    private Tab produtosTab;
+    private Tab currentTab;
 
-    @Autowired
-    public MainLayout(ClienteService clienteService, DREService dreService, VendasService vendasService, ListagemPedidoService listagemPedidoService) {
-        this.clienteService = clienteService;
-        this.dreService = dreService;
-        this.vendasService = vendasService;
-        this.listagemPedidoService = listagemPedidoService;
+    private AbstractGridView<?> currentView;
 
-        // Configurar a barra de navegação superior
+    public MainLayout() {
+        logger.info("Inicializando MainLayout");
+
+        // Depuração de rotas registradas
+        RouteRegistry registry = VaadinService.getCurrent().getRouter().getRegistry();
+        logger.info("Rotas registradas pelo Vaadin:");
+        registry.getRegisteredRoutes().forEach(route -> logger.info("Rota: {}", route.getNavigationTarget().getName()));
+
+        // Registro do handler de erro
+        getUI().ifPresent(ui -> {
+            if (VaadinSession.getCurrent() != null) {
+                VaadinSession.getCurrent().setErrorHandler(new CustomErrorHandler());
+            }
+        });
+
+        // Barra de navegação superior
         H1 title = new H1("Minha Aplicação");
         title.getStyle().set("font-size", "20px");
         title.getStyle().set("margin", "0 20px");
 
         DrawerToggle toggle = new DrawerToggle();
 
-        // Botão para abrir o MainMenuModal
-        Button menuButton = new Button(new Icon(VaadinIcon.MENU), event -> {
-            MainMenuModal menuModal = new MainMenuModal(this);
-            menuModal.open();
-        });
-        menuButton.getElement().setAttribute("title", "Abrir Menu");
+        Button logoutButton = new Button("Sair", event -> {
+            logger.info("Usuário solicitou logout");
+            Dialog confirmDialog = new Dialog();
+            confirmDialog.setHeaderTitle("Confirmação de Logout");
+            confirmDialog.add(new Span("Deseja realmente sair da aplicação?"));
 
-        HorizontalLayout navbarLayout = new HorizontalLayout(toggle, title, menuButton);
+            Button confirmButton = new Button("Sair", e -> {
+                getUI().ifPresent(ui -> {
+                    // Fecha a sessão do Vaadin e redireciona para a página de login
+                    ui.getSession().close();
+                    ui.getPage().executeJs("window.location.href='/login?logout'");
+                });
+                confirmDialog.close();
+            });
+            confirmButton.addThemeVariants(com.vaadin.flow.component.button.ButtonVariant.LUMO_ERROR);
+
+            Button cancelButton = new Button("Cancelar", e -> confirmDialog.close());
+            cancelButton.addThemeVariants(com.vaadin.flow.component.button.ButtonVariant.LUMO_TERTIARY);
+
+            confirmDialog.getFooter().add(cancelButton, confirmButton);
+            confirmDialog.open();
+        });
+        logoutButton.getStyle().set("margin-left", "auto");
+
+        HorizontalLayout navbarLayout = new HorizontalLayout(toggle, title, logoutButton);
         navbarLayout.setWidthFull();
         navbarLayout.setAlignItems(Alignment.CENTER);
         addToNavbar(true, navbarLayout);
 
-        // Configurar o menu lateral (drawer) com apenas as abas
+        // Menu lateral (drawer)
         VerticalLayout menu = new VerticalLayout();
-        menu.setWidth("300px"); // Ajustar a largura do drawer
+        menu.setWidth("300px");
         menu.setHeightFull();
         menu.setMargin(false);
         menu.setPadding(false);
         menu.setSpacing(false);
 
-        // Menu com Tabs
         clientesTab = new Tab("Clientes");
         dreTab = new Tab("Relatório DRE");
-        vendasTab = new Tab("Relatório de Vendas");
+        relVendasTab = new Tab("Relatório de Vendas");
         pedidosTab = new Tab("Listagem de Pedidos");
+        ordensServicoTab = new Tab("Relatório Ordem de Serviço");
+        marcasTab = new Tab("Marcas");
+        fornecedoresTab = new Tab("Fornecedores");
+        produtosTab = new Tab("Produtos");
 
-        menuTabs = new Tabs(clientesTab, dreTab, vendasTab, pedidosTab);
+        menuTabs = new Tabs(clientesTab, dreTab, relVendasTab, pedidosTab, ordensServicoTab, marcasTab, fornecedoresTab, produtosTab);
         menuTabs.setOrientation(Tabs.Orientation.VERTICAL);
+
+        menuTabs.addSelectedChangeListener(event -> {
+            Tab selectedTab = event.getSelectedTab();
+            logger.info("Aba selecionada: {}", selectedTab.getLabel());
+
+            currentTab = selectedTab;
+
+            getUI().ifPresent(ui -> {
+                if (selectedTab == clientesTab) {
+                    ui.navigate("clientes");
+                } else if (selectedTab == dreTab) {
+                    ui.navigate("rel_dre");
+                } else if (selectedTab == relVendasTab) {
+                    ui.navigate("rel_vendas");
+                } else if (selectedTab == pedidosTab) {
+                    ui.navigate("rel_listagem");
+                } else if (selectedTab == ordensServicoTab) {
+                    ui.navigate("rel_ordens_servico");
+                } else if (selectedTab == marcasTab) {
+                    ui.navigate("marcas");
+                } else if (selectedTab == fornecedoresTab) {
+                    ui.navigate("fornecedores");
+                } else if (selectedTab == produtosTab) {
+                    ui.navigate("produtos");
+                }
+            });
+        });
 
         menu.add(menuTabs);
         addToDrawer(menu);
 
-        // Área de conteúdo na área principal
-        contentArea = new VerticalLayout();
-        contentArea.setWidthFull();
-        contentArea.setHeightFull();
-        contentArea.setMargin(true);
-        contentArea.setPadding(true);
-        contentArea.setSpacing(true);
-        contentArea.getStyle().set("margin-left", "300px"); // Adicionar margem à esquerda para corresponder à largura do drawer
-
-        // Definir o conteúdo inicial na área principal
-        contentArea.add(new MainView());
-        setContent(contentArea); // Definir o contentArea como o conteúdo principal do AppLayout
-
-        // Listener para atualizar o conteúdo ao selecionar uma aba
-        menuTabs.addSelectedChangeListener(event -> {
-            System.out.println("Atualizando conteúdo para a aba: " + event.getSelectedTab().getLabel());
-            contentArea.removeAll(); // Limpar o conteúdo atual
-            Tab selectedTab = event.getSelectedTab();
-            if (selectedTab == clientesTab) {
-                System.out.println("Exibindo ClienteView na área principal");
-                contentArea.add(new ClienteView(clienteService));
-            } else if (selectedTab == dreTab) {
-                System.out.println("Exibindo DREView na área principal");
-                DREView dreView = new DREView(dreService);
-                dreView.setWidthFull(); // Garantir que a view ocupe toda a largura disponível
-                contentArea.add(dreView);
-            } else if (selectedTab == vendasTab) {
-                System.out.println("Exibindo VendasView na área principal");
-                VendasView vendasView = new VendasView(vendasService);
-                vendasView.setWidthFull(); // Garantir que a view ocupe toda a largura disponível
-                contentArea.add(vendasView);
-            } else if (selectedTab == pedidosTab) {
-                System.out.println("Exibindo ListagemPedidoView na área principal");
-                contentArea.add(new ListagemPedidoView(listagemPedidoService));
-            }
-        });
-
-        // Tornar o drawer fixo (não retrátil)
         setDrawerOpened(true);
-        setPrimarySection(Section.DRAWER); // Garante que o drawer seja a seção principal
+        setPrimarySection(Section.DRAWER);
 
-        System.out.println("MainLayout inicializado com AppLayout. Drawer width: 300px");
+        logger.info("MainLayout inicializado com sucesso. Drawer width: 300px");
     }
 
-    // Método para permitir que o MainMenuModal selecione uma aba
-    public void selectTab(String tabName) {
-        System.out.println("Selecionando aba via MainMenuModal: " + tabName);
-        switch (tabName) {
+    @Override
+    public void showRouterLayoutContent(com.vaadin.flow.component.HasElement content) {
+        super.showRouterLayoutContent(content);
+        if (content instanceof AbstractGridView) {
+            currentView = (AbstractGridView<?>) content;
+            logger.debug("Nova view ativa: {}", currentView.getClass().getSimpleName());
+        } else {
+            currentView = null;
+            logger.debug("Nenhuma view ativa do tipo AbstractGridView");
+        }
+    }
+
+    @Override
+    public void beforeEnter(BeforeEnterEvent event) {
+        if (!isUserLoggedIn()) {
+            logger.info("Usuário não autenticado ou sessão inválida. Redirecionando para a página de login.");
+            event.getUI().getPage().executeJs("window.location.href='/login?expired=true'");
+            return;
+        }
+
+        String path = event.getLocation().getPath();
+        Tab selectedTab = null;
+        switch (path) {
+            case "":
+                return;
             case "clientes":
-                menuTabs.setSelectedTab(clientesTab);
+            case "cliente":
+                selectedTab = clientesTab;
+                if (path.equals("cliente")) {
+                    event.forwardTo("clientes");
+                }
                 break;
-            case "dre":
-                menuTabs.setSelectedTab(dreTab);
+            case "rel_dre":
+                selectedTab = dreTab;
                 break;
-            case "vendas":
-                menuTabs.setSelectedTab(vendasTab);
+            case "rel_vendas":
+                selectedTab = relVendasTab;
                 break;
-            case "pedidos":
-                menuTabs.setSelectedTab(pedidosTab);
+            case "rel_listagem":
+                selectedTab = pedidosTab;
+                break;
+            case "rel_ordens_servico":
+                selectedTab = ordensServicoTab;
+                break;
+            case "marcas":
+                selectedTab = marcasTab;
+                break;
+            case "fornecedores":
+                selectedTab = fornecedoresTab;
+                break;
+            case "produtos":
+                selectedTab = produtosTab;
                 break;
             default:
-                System.out.println("Tab not found: " + tabName);
+                logger.warn("Rota não reconhecida: {}", path);
+                break;
         }
+
+        if (selectedTab != null) {
+            menuTabs.setSelectedTab(selectedTab);
+            currentTab = selectedTab;
+        }
+    }
+
+    public void selectTab(String tabName) {
+        logger.info("Selecionando aba via chamada direta: {}", tabName);
+        getUI().ifPresent(ui -> {
+            switch (tabName) {
+                case "clientes":
+                    ui.navigate("clientes");
+                    menuTabs.setSelectedTab(clientesTab);
+                    break;
+                case "dre":
+                    ui.navigate("rel_dre");
+                    menuTabs.setSelectedTab(dreTab);
+                    break;
+                case "vendas":
+                    ui.navigate("rel_vendas");
+                    menuTabs.setSelectedTab(relVendasTab);
+                    break;
+                case "pedidos":
+                    ui.navigate("rel_listagem");
+                    menuTabs.setSelectedTab(pedidosTab);
+                    break;
+                case "ordens_servico":
+                    ui.navigate("rel_ordens_servico");
+                    menuTabs.setSelectedTab(ordensServicoTab);
+                    break;
+                case "marcas":
+                    ui.navigate("marcas");
+                    menuTabs.setSelectedTab(marcasTab);
+                    break;
+                case "fornecedores":
+                    ui.navigate("fornecedores");
+                    menuTabs.setSelectedTab(fornecedoresTab);
+                    break;
+                case "produtos":
+                    ui.navigate("produtos");
+                    menuTabs.setSelectedTab(produtosTab);
+                    break;
+                default:
+                    logger.warn("Aba não encontrada: {}", tabName);
+            }
+        });
+    }
+
+    private boolean isUserLoggedIn() {
+        return SecurityContextHolder.getContext().getAuthentication() != null &&
+               SecurityContextHolder.getContext().getAuthentication().isAuthenticated() &&
+               !(SecurityContextHolder.getContext().getAuthentication() instanceof AnonymousAuthenticationToken);
     }
 }

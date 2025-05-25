@@ -1,0 +1,7 @@
+/* src/main/resources/META-INF/resources/styles/shared-styles.css */
+vaadin-dialog-overlay[theme~="dialog-theme"] {
+    z-index: 1000;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -8,7 +8,7 @@
   "addonFrontendFolder": "target/flow-frontend/",
   "themeName": "",
   "clientServiceWorkerSource": "D:\\projeto-vaadin\\target\\sw.ts",
-  "pwaEnabled": true,
-  "offlineEnabled": true,
-  "offlinePath": "'.'"
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
 }

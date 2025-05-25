@@ -1,6 +1,7 @@
 package com.exemplo;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ClienteRepository extends JpaRepository<Cliente, ClienteId> {
+@Repository
+public interface ClienteRepository extends GenericRepository<Cliente, ClienteId> {
 }

@@ -118,17 +118,12 @@
     "transform-ast": "2.4.4",
     "typescript": "4.7.4",
     "vite": "^3.2.11",
-    "vite-plugin-checker": "^0.9.1",
+    "vite-plugin-checker": "0.4.9",
     "workbox-build": "6.5.0",
     "workbox-core": "6.5.0",
     "workbox-precaching": "6.5.0"
   },
   "overrides": {
-    "@vaadin/common-frontend": "$@vaadin/common-frontend",
-    "construct-style-sheets-polyfill": "$construct-style-sheets-polyfill",
-    "lit": "$lit",
-    "@vaadin/router": "$@vaadin/router",
-    "@polymer/polymer": "$@polymer/polymer",
     "@vaadin/bundles": "$@vaadin/bundles",
     "@vaadin/accordion": "$@vaadin/accordion",
     "@vaadin/app-layout": "$@vaadin/app-layout",
@@ -214,6 +209,7 @@
     "@vaadin/vaadin-overlay": "$@vaadin/vaadin-overlay",
     "@vaadin/vaadin-progress-bar": "$@vaadin/vaadin-progress-bar",
     "@vaadin/vaadin-radio-button": "$@vaadin/vaadin-radio-button",
+    "@vaadin/router": "$@vaadin/router",
     "@vaadin/vaadin-select": "$@vaadin/vaadin-select",
     "@vaadin/vaadin-split-layout": "$@vaadin/vaadin-split-layout",
     "@vaadin/vaadin-tabs": "$@vaadin/vaadin-tabs",
@@ -226,6 +222,10 @@
     "@vaadin/vaadin-virtual-list": "$@vaadin/vaadin-virtual-list",
     "@vaadin/vertical-layout": "$@vaadin/vertical-layout",
     "@vaadin/virtual-list": "$@vaadin/virtual-list",
+    "@vaadin/common-frontend": "$@vaadin/common-frontend",
+    "construct-style-sheets-polyfill": "$construct-style-sheets-polyfill",
+    "lit": "$lit",
+    "@polymer/polymer": "$@polymer/polymer",
     "date-fns": "$date-fns"
   },
   "vaadin": {
@@ -350,6 +350,6 @@
       "workbox-core": "6.5.0",
       "workbox-precaching": "6.5.0"
     },
-    "hash": "17914fb257e5fe99727ae356c39257d9fe01270be0260641ff1b33eda724d279"
+    "hash": "3e52ff19f4d9c4e05ac9fd9c2b161e263d306d0975ae01e2c3cd158f2da10c23"
   }
 }

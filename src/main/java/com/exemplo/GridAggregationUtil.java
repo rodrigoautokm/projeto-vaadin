@@ -23,11 +23,12 @@ import java.util.stream.Collectors;
 
 public class GridAggregationUtil<T> {
 
-    private final List<T> items;
+    private List<T> items; // Tornar mutável
     private final List<GridFilterUtil.ColumnConfig<T>> columnConfigs;
+    private ComboBox<GridFilterUtil.ColumnConfig<T>> valueFieldComboBox;
 
     public GridAggregationUtil(List<T> items, List<GridFilterUtil.ColumnConfig<T>> columnConfigs) {
-        this.items = items;
+        this.items = new ArrayList<>(items); // Garantir que seja mutável
         this.columnConfigs = columnConfigs;
     }
 
@@ -39,8 +40,29 @@ public class GridAggregationUtil<T> {
     }
 
     public void updateItems(List<T> newItems) {
-        this.items.clear();
-        this.items.addAll(newItems);
+        this.items = new ArrayList<>(newItems != null ? newItems : new ArrayList<>()); // Substituir por uma nova lista mutável
+        if (valueFieldComboBox != null) {
+            loadValueFieldOptions();
+        }
+    }
+
+    private void loadValueFieldOptions() {
+        if (valueFieldComboBox == null) return;
+        List<GridFilterUtil.ColumnConfig<T>> numericColumns = columnConfigs.stream()
+            .filter(config -> {
+                GridColumnConfig gridColumnConfig = config.getGridColumnConfig();
+                if (gridColumnConfig == null) {
+                    System.out.println("GridColumnConfig não disponível para a coluna: " + config.getHeader());
+                    return false;
+                }
+                String type = gridColumnConfig.getType();
+                boolean isNumeric = "NUMBER".equalsIgnoreCase(type);
+                System.out.println("Coluna: " + config.getHeader() + ", Tipo: " + type + ", É numérico? " + isNumeric);
+                return isNumeric;
+            })
+            .collect(Collectors.toList());
+        System.out.println("Opções encontradas para Campo de Valor: " + numericColumns.stream().map(GridFilterUtil.ColumnConfig::getHeader).collect(Collectors.toList()));
+        valueFieldComboBox.setItems(numericColumns);
     }
 
     private void abrirDialogoAgrupamento() {
@@ -53,66 +75,48 @@ public class GridAggregationUtil<T> {
         layout.setPadding(false);
         layout.setSpacing(true);
 
-        // Primeiro nível de agrupamento (apenas campos String)
         ComboBox<GridFilterUtil.ColumnConfig<T>> groupByComboBox1 = new ComboBox<>("Agrupar por");
         groupByComboBox1.setItems(columnConfigs.stream()
             .filter(config -> {
-                if (items.size() == 0) return false;
-                Object value = config.getValueExtractor().apply(items.get(0));
-                return value instanceof String; // Apenas campos do tipo String
+                GridColumnConfig gridColumnConfig = config.getGridColumnConfig();
+                if (gridColumnConfig == null) return false;
+                return "STRING".equalsIgnoreCase(gridColumnConfig.getType());
             })
             .collect(Collectors.toList()));
         groupByComboBox1.setItemLabelGenerator(GridFilterUtil.ColumnConfig::getHeader);
         groupByComboBox1.setWidth("200px");
 
-        // Dropdown para selecionar o campo de valor
-        ComboBox<GridFilterUtil.ColumnConfig<T>> valueFieldComboBox = new ComboBox<>("Campo de Valor");
-        valueFieldComboBox.setItems(columnConfigs.stream()
-            .filter(config -> {
-                if (items.size() == 0) return false;
-                Object value = config.getValueExtractor().apply(items.get(0));
-                return value != null && (value instanceof Number || value instanceof java.math.BigDecimal) &&
-                       (config.getHeader().equals("Valor Total") || config.getHeader().equals("Desconto Total"));
-            })
-            .collect(Collectors.toList()));
+        valueFieldComboBox = new ComboBox<>("Campo de Valor");
+        loadValueFieldOptions();
         valueFieldComboBox.setItemLabelGenerator(GridFilterUtil.ColumnConfig::getHeader);
         valueFieldComboBox.setWidth("200px");
 
-        // Dropdown para selecionar a operação (Somar ou Contar)
         ComboBox<String> operationComboBox = new ComboBox<>("Operação");
         operationComboBox.setItems("Somar", "Contar");
         operationComboBox.setWidth("150px");
-        operationComboBox.setValue("Contar"); // Valor padrão
+        operationComboBox.setValue("Contar");
 
-        // Segundo nível de agrupamento (ajustar rótulo para campos de data)
         ComboBox<GridFilterUtil.ColumnConfig<T>> groupByComboBox2 = new ComboBox<>("Agrupar por (2º nível)");
         groupByComboBox2.setItems(columnConfigs);
         groupByComboBox2.setItemLabelGenerator(config -> {
-            if (items.size() > 0) {
-                Object value = config.getValueExtractor().apply(items.get(0));
-                if (value instanceof Timestamp) {
-                    return "Mês de " + config.getHeader(); // Ex.: "Mês de Emissão"
-                }
+            GridColumnConfig gridColumnConfig = config.getGridColumnConfig();
+            if (gridColumnConfig != null && "DATE".equalsIgnoreCase(gridColumnConfig.getType())) {
+                return "Mês de " + config.getHeader();
             }
             return config.getHeader();
         });
         groupByComboBox2.setWidth("200px");
-        groupByComboBox2.setClearButtonVisible(true); // Permite desmarcar o segundo nível de agrupamento
+        groupByComboBox2.setClearButtonVisible(true);
 
-        // Botão para executar o agrupamento
         Button applyButton = new Button("Aplicar", event -> executeAggregation(groupByComboBox1, groupByComboBox2, operationComboBox, valueFieldComboBox, layout));
-
-        // Botão para fechar o diálogo
         Button closeButton = new Button("Fechar", event -> dialog.close());
 
-        // Adicionar listener para executar a consulta automaticamente ao selecionar o segundo agrupamento
         groupByComboBox2.addValueChangeListener(event -> {
-            if (event.getValue() != null) { // Executar apenas se um valor for selecionado
+            if (event.getValue() != null) {
                 executeAggregation(groupByComboBox1, groupByComboBox2, operationComboBox, valueFieldComboBox, layout);
             }
         });
 
-        // Layout dos dropdowns e botões
         HorizontalLayout controlsLayout1 = new HorizontalLayout(groupByComboBox1, valueFieldComboBox, operationComboBox);
         controlsLayout1.setAlignItems(Alignment.BASELINE);
         HorizontalLayout controlsLayout2 = new HorizontalLayout(groupByComboBox2, applyButton, closeButton);
@@ -140,38 +144,30 @@ public class GridAggregationUtil<T> {
             return;
         }
 
-        // Executar o agrupamento
         List<AggregationResult> results = performAggregation(groupByConfig1, groupByConfig2, operation, valueFieldConfig);
 
-        // Exibir o resultado em uma nova grade
         Grid<AggregationResult> resultGrid = new Grid<>(AggregationResult.class, false);
         resultGrid.addColumn(new ComponentRenderer<>(result -> {
             Span span = new Span(result.getGroupValue());
             if (result.isFirstLevel()) {
-                span.getStyle().set("font-weight", "bold"); // Negrito para o primeiro nível
-                span.getStyle().set("color", "blue"); // Cor azul para destacar
+                span.getStyle().set("font-weight", "bold");
+                span.getStyle().set("color", "blue");
             } else {
-                span.getStyle().set("padding-left", "20px"); // Indentação para o segundo nível
+                span.getStyle().set("padding-left", "20px");
             }
             return span;
         }))
             .setHeader(groupByConfig1.getHeader())
             .setWidth("250px");
         resultGrid.addColumn(new TextRenderer<>(result -> {
-            DecimalFormat df = new DecimalFormat("#,##0.00"); // Formato com 2 casas decimais
+            DecimalFormat df = new DecimalFormat("#,##0.00");
             return df.format(result.getResultValue());
         }))
             .setHeader("Somar".equals(operation) ? "Soma" : "Contagem")
             .setTextAlign(ColumnTextAlign.END);
 
-        // Aplicar estilo de fundo à linha inteira quando houver mais de um agrupamento
         if (groupByConfig2 != null) {
-            resultGrid.setClassNameGenerator(result -> {
-                if (result.isFirstLevel()) {
-                    return "highlight-row"; // Classe CSS para destacar a linha
-                }
-                return null;
-            });
+            resultGrid.setClassNameGenerator(result -> result.isFirstLevel() ? "highlight-row" : null);
             resultGrid.getElement().getStyle().set("width", "100%");
             resultGrid.getElement().executeJs(
                 "var style = document.createElement('style');" +
@@ -184,7 +180,6 @@ public class GridAggregationUtil<T> {
         resultGrid.setHeight("400px");
         resultGrid.setWidth("100%");
 
-        // Remover qualquer grade anterior e adicionar a nova
         layout.getChildren()
             .filter(component -> component instanceof Grid)
             .forEach(layout::remove);
@@ -192,65 +187,59 @@ public class GridAggregationUtil<T> {
     }
 
     private List<AggregationResult> performAggregation(GridFilterUtil.ColumnConfig<T> groupByConfig1, GridFilterUtil.ColumnConfig<T> groupByConfig2, String operation, GridFilterUtil.ColumnConfig<T> valueFieldConfig) {
-        // Primeiro nível de agrupamento
         Map<Object, List<T>> groupedItems1 = items.stream()
             .collect(Collectors.groupingBy(groupByConfig1.getValueExtractor()));
 
         List<AggregationResult> results = new ArrayList<>();
-        SimpleDateFormat monthFormat = new SimpleDateFormat("MM-yyyy"); // Formato MM-yyyy
+        SimpleDateFormat monthFormat = new SimpleDateFormat("MM-yyyy");
 
-        // Agrupar e calcular totais do primeiro nível
         List<Map.Entry<Object, List<T>>> firstLevelGroups = new ArrayList<>();
         for (Map.Entry<Object, List<T>> entry1 : groupedItems1.entrySet()) {
             firstLevelGroups.add(entry1);
         }
 
-        // Ordenar grupos do primeiro nível pelo valor total (decrescente)
         firstLevelGroups.sort((entry1, entry2) -> {
             double total1 = calculateResult(entry1.getValue(), operation, valueFieldConfig);
             double total2 = calculateResult(entry2.getValue(), operation, valueFieldConfig);
-            return Double.compare(total2, total1); // Ordem decrescente
+            return Double.compare(total2, total1);
         });
 
         for (Map.Entry<Object, List<T>> entry1 : firstLevelGroups) {
             Object groupValue1 = entry1.getKey();
             List<T> groupItems1 = entry1.getValue();
 
-            // Total do primeiro nível
             double totalFirstLevel = calculateResult(groupItems1, operation, valueFieldConfig);
             results.add(new AggregationResult(String.valueOf(groupValue1), totalFirstLevel, true));
 
             if (groupByConfig2 != null) {
-                // Segundo nível de agrupamento
                 Map<Object, List<T>> groupedItems2;
-                if (groupByConfig2.getValueExtractor().apply(items.get(0)) instanceof Timestamp) {
-                    // Agrupar por mês para campos de data
+                GridColumnConfig gridColumnConfig = groupByConfig2.getGridColumnConfig();
+                if (gridColumnConfig != null && "DATE".equalsIgnoreCase(gridColumnConfig.getType())) {
                     groupedItems2 = groupItems1.stream()
                         .collect(Collectors.groupingBy(item -> {
                             Object value = groupByConfig2.getValueExtractor().apply(item);
                             if (value == null) {
-                                return "N/A"; // Tratar valores nulos
+                                return "N/A";
                             }
-                            return monthFormat.format((Timestamp) value); // Formatar como MM-yyyy
+                            return monthFormat.format((Timestamp) value);
                         }));
                 } else {
                     groupedItems2 = groupItems1.stream()
                         .collect(Collectors.groupingBy(groupByConfig2.getValueExtractor()));
                 }
 
-                // Ordenar subgrupos do segundo nível pelo valor (decrescente)
                 List<Map.Entry<Object, List<T>>> secondLevelGroups = new ArrayList<>(groupedItems2.entrySet());
                 secondLevelGroups.sort((entry1Sub, entry2Sub) -> {
                     double total1Sub = calculateResult(entry1Sub.getValue(), operation, valueFieldConfig);
                     double total2Sub = calculateResult(entry2Sub.getValue(), operation, valueFieldConfig);
-                    return Double.compare(total2Sub, total1Sub); // Ordem decrescente
+                    return Double.compare(total2Sub, total1Sub);
                 });
 
                 for (Map.Entry<Object, List<T>> entry2 : secondLevelGroups) {
                     Object groupValue2 = entry2.getKey();
                     List<T> groupItems2 = entry2.getValue();
                     double resultValue = calculateResult(groupItems2, operation, valueFieldConfig);
-                    results.add(new AggregationResult("  " + String.valueOf(groupValue2), resultValue, false)); // Indentação para o segundo nível
+                    results.add(new AggregationResult("  " + String.valueOf(groupValue2), resultValue, false));
                 }
             }
         }
@@ -262,15 +251,20 @@ public class GridAggregationUtil<T> {
         if ("Contar".equals(operation)) {
             return groupItems.size();
         } else {
-            // "Somar"
             return groupItems.stream()
                 .map(valueFieldConfig.getValueExtractor())
-                .filter(value -> value != null && (value instanceof Number || value instanceof java.math.BigDecimal))
+                .filter(value -> value != null)
                 .mapToDouble(value -> {
                     if (value instanceof Number) {
                         return ((Number) value).doubleValue();
                     } else if (value instanceof java.math.BigDecimal) {
                         return ((java.math.BigDecimal) value).doubleValue();
+                    } else if (value instanceof String) {
+                        try {
+                            return Double.parseDouble((String) value);
+                        } catch (NumberFormatException e) {
+                            return 0.0;
+                        }
                     }
                     return 0.0;
                 })
